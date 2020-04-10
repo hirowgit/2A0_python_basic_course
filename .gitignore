@@ -123,3 +123,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+python/.DS_Store
+python/python_path
+GUI_python_platform/.DS_Store
+GUI_python_platform/python_path
+GUI_python_platform/samplepy/.DS_Store
+GUI_python_platform/samplepy/lec1_step1.py
+GUI_python_platform/samplepy/python3dup2
+GUI_python_platform/samplepy/samplepy.xcodeproj/project.pbxproj
+GUI_python_platform/samplepy/samplepy.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+GUI_python_platform/samplepy/samplepy.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+GUI_python_platform/samplepy/samplepy.xcodeproj/project.xcworkspace/xcuserdata/hiro.xcuserdatad/UserInterfaceState.xcuserstate
+GUI_python_platform/samplepy/samplepy.xcodeproj/xcshareddata/xcschemes/samplepy.xcscheme
+GUI_python_platform/samplepy/samplepy.xcodeproj/xcuserdata/hiro.xcuserdatad/xcschemes/xcschememanagement.plist
+.DS_Store
