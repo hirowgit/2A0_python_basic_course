@@ -1,5 +1,7 @@
 # 2A_python_basic_course
-$$ \begin{eqnarray} 4a &=& ((a+a)+a)+a \ &=& (a+a)+(a+a) \end{eqnarray} $$
+$$\begin{eqnarray} 
+4a &=& ((a+a)+a)+a \ &=& (a+a)+(a+a) 
+\end{eqnarray} $$
 /test/
 受光した信号を
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;x[k]\&space;(k=1&space;\dots&space;N)" />
