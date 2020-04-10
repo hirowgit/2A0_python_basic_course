@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+
 # 2A_python_basic_course
 $$\begin{eqnarray} 
 4a &=& ((a+a)+a)+a \ &=& (a+a)+(a+a) 
