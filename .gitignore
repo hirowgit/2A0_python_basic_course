@@ -137,3 +137,5 @@ GUI_python_platform/samplepy/samplepy.xcodeproj/project.xcworkspace/xcuserdata/h
 GUI_python_platform/samplepy/samplepy.xcodeproj/xcshareddata/xcschemes/samplepy.xcscheme
 GUI_python_platform/samplepy/samplepy.xcodeproj/xcuserdata/hiro.xcuserdatad/xcschemes/xcschememanagement.plist
 .DS_Store
+gitignore
+gitattributes
