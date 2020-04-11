@@ -9,7 +9,10 @@ for x in fruits:
 
 name:  stdout
 output_type:  stream
-text:  apple  banana  cherry 
+text:  
+apple  
+banana  
+cherry 
 
 ```
 In [ ]:
