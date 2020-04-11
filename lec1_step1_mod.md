@@ -1,3 +1,4 @@
+In [3]:
 ```{.python .input  n=3}
 fruits = ["apple "banana "cherry"]
 for x in fruits:
@@ -11,11 +12,11 @@ output_type:  stream
 text:  apple  banana  cherry 
 
 ```
-
+In [ ]:
 ```{.python .input}
 
 ```
-
+In [ ]:
 ```{.python .input}
 
 ```
