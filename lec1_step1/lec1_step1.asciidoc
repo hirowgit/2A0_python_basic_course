@@ -1,0 +1,31 @@
+
+
++*In[2]:*+
+[source, ipython3]
+----
+fruits = ['strawberry', 'grape', 'tomato'];
+print(fruits);
+----
+
+
++*Out[2]:*+
+----
+['strawberry', 'grape', 'tomato']
+----
+
+
++*In[3]:*+
+[source, ipython3]
+----
+fruits = ['strawberry', 'grape', 'tomato'];
+for x in fruits:
+  print(x)
+----
+
+
++*Out[3]:*+
+----
+strawberry
+grape
+tomato
+----
