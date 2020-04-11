@@ -1,10 +1,7 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
 
 # 2A_python_basic_course
-$$\begin{eqnarray} 
-4a &=& ((a+a)+a)+a \ &=& (a+a)+(a+a) 
-\end{eqnarray} $$
-/test/
+
 受光した信号を
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;x[k]\&space;(k=1&space;\dots&space;N)" />
 、サンプリング周波数を
