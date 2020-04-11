@@ -7,9 +7,9 @@ for x in fruits:
 ```{.json .output n=3}
 [
  {
- name:  stdout
- output_type:  stream
- text:  apple  banana  cherry 
+name:  stdout
+output_type:  stream
+text:  apple  banana  cherry 
  }
 ]
 ```
