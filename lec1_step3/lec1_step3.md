@@ -60,15 +60,11 @@ print(s)
 
 ```python
 import math 
-pimath.pi
-
+pi=math.pi
+print(pi)
 ```
 
-
-
-
     3.141592653589793
-
 
 
 

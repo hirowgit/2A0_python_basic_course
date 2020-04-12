@@ -43,11 +43,12 @@ s = pd.Series([2, 4, 6, np.nan, 7, 9])
 print(s)
 
 
-# In[7]:
+# In[9]:
 
 
 import math 
-pimath.pi
+pi=math.pi
+print(pi)
 
 
 # In[ ]:
