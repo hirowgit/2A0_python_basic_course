@@ -99,7 +99,7 @@ Learn matrix multiplication for machine learning*
 https://towardsdatascience.com/a-complete-beginners-guide-to-matrix-multiplication-for-data-science-with-python-numpy-9274ecfc1dc6
  
 ***
-How to reinstall modules (English)
+#### How to reinstall modules (English)
 
 If you have a trouble for updating  “numpy” and “panda” modules, you can see webpages to deal with the issues.  
 
@@ -109,7 +109,7 @@ I want to install numpy using pip install numpy command but i get follwing error
 https://stackoverflow.com/questions/29499815/how-to-install-numpy-on-windows-using-pip-install
 
 ***
-How to reinstall modules (Japanese)
+#### How to reinstall modules (Japanese)
 
 For Japanese (or you can use Google chrome with English translation mode):
 
@@ -123,7 +123,7 @@ Or other serious trouble fix method:
  https://qiita.com/holygo/items/1644586ff283408b28e2
  
 ***
-## Step1
+## Step1 Your installation status
 
 Please check whether a python compiler was successfully installed in your computer, by using the following code:
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step1.py#L25-L26
@@ -225,7 +225,7 @@ https://hirowgit.github.io/2A_python_basic_course/lec1_step2/lec1_step2.html
 ***
 This is a short review:
 
-+In[21]:+
++In[21]:+  
 _How to use quotation marks inside the string._  
 _Note: double quotation marks displayed at the beginning and end_  
 <pre><code>
@@ -233,18 +233,20 @@ _Note: double quotation marks displayed at the beginning and end_
 </code></pre>
 
 +Out[21]:+
+<pre><code>
 "strawberry's cake"
+</code></pre>  
 
 +In[22]:+
-
-But if you use double quotation marks inside the string,
-
-single quotation marks displayed at the beginning and end, as well as the default mode.
-
+*But if you use double quotation marks inside the string, single quotation marks displayed at the beginning and end, as well as the default mode.*
+<pre><code>
 'I said \"hello\" to him.'
+</code></pre>   
 
 +Out[22]:+
+<pre><code>
 'I said "hello" to him.'
+</code></pre>   
 
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step2/lec1_step2.txt#L73-L126
 
@@ -280,18 +282,27 @@ lec1_step2/lec1_step2.txt:73-126
 ***
 ## Step3 Import necessary modules for data science
 
-As I said, I introduce you a MATLAB compatible usage with Python here. In this sense, firstly, we need modules of “math” (pi), “numpy” (matrix operation), pandas (statistics) and “matplotlib” (MATLAB like plotting for the visualization).
-And then you need to add the following code in the beginning.
+I introduce a MATLAB compatible usage with Python here. In this sense, firstly, we need modules of “math” (pi), “numpy” (matrix operation), pandas (statistics) and “matplotlib” (MATLAB like plotting for the visualization).
+And then you need to add the following code in the beginning.  
 
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step3.py#L34-L37
+<pre><code>
+import numpy as np  
+import pandas as pd  
+import matplotlib.pyplot as plt  
+</code></pre>
+https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step3.py#L34-L37  
 
 lec1_step3.py:27-30
-<pre><code>import math import numpy as np import pandas as pd import matplotlib.pyplot as plt </code></pre>
+
+<pre><code>
+import math  
+import numpy as np   
+import pandas as pd   
+import matplotlib.pyplot as plt   
+</code></pre>
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
- waga  2020-04-12 13:43:31
+
+***
 If you have an error, after the running the above code to load necessary modules, you need to check your installation status of the module. You can see related instructions above.
 
 How to reinstall modules (English)
