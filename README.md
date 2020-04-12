@@ -416,7 +416,7 @@ https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html
 https://stackoverflow.com/questions/17628613/what-is-inf-and-nan/17628637  
   
 and other information (Japanese).   
-_Python 数値計算入門/ 非数と無限大_
+_Python 数値計算入門/ 非数と無限大_  
 https://python.atelierkobato.com/infinity/  
 
 
