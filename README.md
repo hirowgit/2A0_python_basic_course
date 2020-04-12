@@ -26,18 +26,18 @@ Python Tutorial is also fine for you.
 https://www.w3schools.com/python/
 
 
-### Python Tutorial in w3schools.com
+### Python Tutorial in _w3schools.com_
 Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.
 
 You can find a method of how to use some specific command, funciton and data structures.
 
-#### Python Lists in w3schools.com
+#### Python Lists in _w3schools.com_
 Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.
 
 https://www.w3schools.com/python/python_lists.asp
 
 
-#### Python Tryit Editor v1.0 (w3schools.com)
+#### Python Tryit Editor v1.0 (_w3schools.com_)
 This is an example of how to use “list” in python.
 You can push the green button “Try it Yourself” and try to run the code in the web browser even without the installation.
 
@@ -46,12 +46,11 @@ https://www.w3schools.com/python/trypython.asp?filename=demo_list
 
 ***
 ## An example 
-This is a sample code to use the list:
-
-fruits = [‘strawberry’, ‘grape’, ‘tomato’];
-
-print(fruits);
-
+This is a sample code to use the list:  
+<pre><code>  
+fruits = [‘strawberry’, ‘grape’, ‘tomato’];  
+print(fruits);  
+</code></pre>
 ## What does mathematics we learn?
 
 This is a matrix   
@@ -94,7 +93,7 @@ Let’s start the course!
 
 Let us start this lecture course. I offer tutorials in the aim of training  to contribute to enhance knowledge, abilities and skills toward data science such as solving optimization problems, biological data analyses, risk management and so on. In this aim, I need to emphasize the necessity of learning about matrix operation i.e. Linear algebra. In the case of Python programming, it means that you need python modules callded “numpy” (for matrix operations/linear algebra) and “panda” (statistics), which are already included in the anaconda package.  
 
-*A Complete Beginners Guide to Matrix Multiplication for Data Science with Python Numpy
+*A Complete Beginners Guide to Matrix Multiplication for Data Science with Python Numpy  
 Learn matrix multiplication for machine learning* 
 https://towardsdatascience.com/a-complete-beginners-guide-to-matrix-multiplication-for-data-science-with-python-numpy-9274ecfc1dc6
  
@@ -104,10 +103,10 @@ https://towardsdatascience.com/a-complete-beginners-guide-to-matrix-multiplicati
 If you have a trouble for updating  “numpy” and “panda” modules, you can see webpages to deal with the issues.  
 
 *Stack Overflow*
-*How to install numpy on windows using pip install?
-I want to install numpy using pip install numpy command but i get follwing error: RuntimeError: Broken toolchain: cannot link a simple C program I'm using windows 7 32bit, python 2.7.9, pip 6.1.1...*  
+*How to install numpy on windows using pip install?*
 https://stackoverflow.com/questions/29499815/how-to-install-numpy-on-windows-using-pip-install
-
+*I want to install numpy using pip install numpy command but i get follwing error: RuntimeError: Broken toolchain: cannot link a simple C program I'm using windows 7 32bit, python 2.7.9, pip 6.1.1...*  
+  
 ***
 #### How to reinstall modules (Japanese)
 
@@ -123,14 +122,16 @@ Or other serious trouble fix method:
  https://qiita.com/holygo/items/1644586ff283408b28e2
  
 ***
-## Step1 Your installation status
+## Step 1 Your installation status
 
 Please check whether a python compiler was successfully installed in your computer, by using the following code:
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step1.py#L25-L26
 
 lec1_step1.py:25-26
-<pre><code>fruits = ['strawberry', 'grape', 'tomato'];  
-print(fruits); </code></pre>
+<pre><code>
+fruits = ['strawberry', 'grape', 'tomato'];  
+print(fruits); 
+</code></pre>
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
 
 
@@ -145,23 +146,20 @@ lec1_step1/lec1_step1.txt:32
 ### Note: 
 tomato is a vegetable but types of tomato in some countries like Japan and Korea are very sweet and the sugar content is high like fruits.
 
-*Japanese Momotaro Tomatoes (specialtyproduce.com)*   
-*The Japanese Momotaro tomato is an oblate-shaped hybrid that typically weighs between six and seven ounces. Its skin is thick and pink with green shoulders around...*  
+*Japanese Momotaro Tomatoes (specialtyproduce.com)*    
 https://specialtyproduce.com/produce/Japanese_Momotaro_Tomatoes_5032.php
-
+*The Japanese Momotaro tomato is an oblate-shaped hybrid that typically weighs between six and seven ounces. Its skin is thick and pink with green shoulders around...*   
 ***
 In Python, string data is treated with single quotation or double quotation marks _i.e._ ' or “.  In the rule, both are equivalent. Here I use single quotation because of the consistency with MATLAB. See in the tutorial course on MATLAB,
 *hirowgit/1A_matlab_basic_course*  
 https://github.com/hirowgit/1A_matlab_basic_course
-
- <a href="https://github.com/hirowgit/1A_matlab_basic_course">hirowgit/1A_matlab_basic_course</a>
  
 ***
 *MATLAB programming course for beginners, supported by Wagatsuma Lab@Kyutech*  
 https://github.com/hirowgit/1A_matlab_basic_course/blob/master/README.md
 
 ***
-## Step2 Difference of quotation marks in Python
+## Step 2 Difference of quotation marks in Python
 
 As I said, there is no difference of quotation marks functionally and therefore you can use either one as you like.
 Technically a minor difference exists in the compiler, _i.e._ visualization.
@@ -202,7 +200,6 @@ lec1_step2.py:42
 This is consistent with MATLAB description rule as I explained in the MATLAB tutorial,
 https://github.com/hirowgit/1A_matlab_basic_course#display-the-result
 
-hirowgit/1A_matlab_basic_course
  <a href="https://github.com/hirowgit/1A_matlab_basic_course">hirowgit/1A_matlab_basic_course</a>
 
 ***
@@ -237,7 +234,7 @@ _Note: double quotation marks displayed at the beginning and end_
 "strawberry's cake"
 </code></pre>  
 
-+In[22]:+
++In[22]:+  
 *But if you use double quotation marks inside the string, single quotation marks displayed at the beginning and end, as well as the default mode.*
 <pre><code>
 'I said \"hello\" to him.'
@@ -248,6 +245,7 @@ _Note: double quotation marks displayed at the beginning and end_
 'I said "hello" to him.'
 </code></pre>   
 
+You can check further examples:  
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step2/lec1_step2.txt#L73-L126
 
 lec1_step2/lec1_step2.txt:73-126
@@ -280,7 +278,7 @@ lec1_step2/lec1_step2.txt:73-126
 
 
 ***
-## Step3 Import necessary modules for data science
+## Step 3 Import necessary modules for data science
 
 I introduce a MATLAB compatible usage with Python here. In this sense, firstly, we need modules of “math” (pi), “numpy” (matrix operation), pandas (statistics) and “matplotlib” (MATLAB like plotting for the visualization).
 And then you need to add the following code in the beginning.  
@@ -305,15 +303,18 @@ import matplotlib.pyplot as plt
 ***
 If you have an error, after the running the above code to load necessary modules, you need to check your installation status of the module. You can see related instructions above.
 
-![How to reinstall modules (English)](https://github.com/hirowgit/2A_python_basic_course/blob/master/README.md#how-to-reinstall-modules-english "English")
+[How to reinstall modules (English)]  
+https://github.com/hirowgit/2A_python_basic_course/blob/master/README.md#how-to-reinstall-modules-english  
+  
+[How to reinstall modules (Japanese)]  
+https://github.com/hirowgit/2A_python_basic_course/blob/master/README.md#how-to-reinstall-modules-japanese  
+  
 
-![How to reinstall modules (Japanese)]( https://github.com/hirowgit/2A_python_basic_course/blob/master/README.md#how-to-reinstall-modules-japanese "Japanese")
- 
 ***
-### Tips
+### Note:
 This is an example of how to use the loaded module (“math”).
-If you type “pi” in the command window like MATLAB, the error message will be happing.
-
+If you type “pi” in the command window like MATLAB, the error message will be happing.  
+![\pi](pi.png "\pi")  
 <pre><code>
 ---------------------------------------------------------------------------  
 NameError                                 Traceback (most recent call last)  
@@ -323,7 +324,7 @@ NameError                                 Traceback (most recent call last)
 NameError: name 'pi' is not defined    
  It is because that there is no predefined constant, as /latex $ \pi $ termed ‘pi.’  
 </code></pre>
-![\pi](pi.png "\pi")
+
  
 
 ***
@@ -366,12 +367,10 @@ y = np.sin(x) plt.plot(x, y)
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
 
 Here is the result.  
-![plot1](https://hirowgit.github.io/2A_python_basic_course/lec1_step3/lec1_step3_files/lec1_step3_4_1.png "plot1")
-
-https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step3/lec1_step3_files/lec1_step3_4_1.png
- 
- <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
-
+![plot1](https://hirowgit.github.io/2A_python_basic_course/lec1_step3/lec1_step3_files/lec1_step3_4_1.png "plot1")  
+  
+https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step3/lec1_step3_files/lec1_step3_4_1.png  
+  
 ***
 Then, you test “pandas” module. By using a simple code such as:  
 <pre><code>  
@@ -387,9 +386,7 @@ lec1_step3.py:59-60
 s = pd.Series([2, 4, 6, np.nan, 7, 9])   
 print(s)   
 </code></pre>
-
- <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
- 
+   
  
 Here is the result.  
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step3/lec1_step3.txt#L96-L104
@@ -410,21 +407,21 @@ _Out[6]:_
 ***
 ## Assignment 1-3A:
 Find other physical constants embedded in the math module, similar like \pi.
-(Please do not type your answer here. I will invite you in KWM (Key Words Meeting) Web)
+_  
 
 ***
 According to the question on what is “nan,” you can refer the explanation in the the SciPy community (English),  
-_stackoverflow.com_
+_stackoverflow.com_  
 https://docs.scipy.org/doc/numpy/reference/generated/numpy.isnan.html  
 https://stackoverflow.com/questions/17628613/what-is-inf-and-nan/17628637  
   
-and other information (Japanese).  
+and other information (Japanese).   
 _Python 数値計算入門/ 非数と無限大_
 https://python.atelierkobato.com/infinity/  
 
 
 ***
-## Step4 Comparison of various import methods
+## Step 4 Comparison of various import methods
 
 Now you understood how to use modules and then you want to minimize efforts for typing of codes.  
 In the sense to keep a consistency with MATLAB, it is a little bit messy if you have to type “math.sin(x),” “math.cos(x),” to add “math.” again and again, even they are very familiar functions.  
@@ -464,7 +461,7 @@ from math import sin
 from math import cos   
 from math import tan   
    
- x1=sin(pi/2)   
+x1=sin(pi/2)   
 x2=cos(0)   
 x3=tan(pi/4)   
 </code></pre>  
@@ -477,7 +474,7 @@ https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step4.py#L80
 
 lec1_step4.py:80-90  
 <pre><code>  
-from math import **   
+from math import *   
   
 x1=sin(pi/2)   
 x2=cos(0)   
@@ -491,7 +488,7 @@ print(x3)
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>  
  
 ***
-Now you are free from the name of the module and you can use primitive mathematical functions without ” *. ** ” descriptions.
+Now you are free from the name of the module and you can use primitive mathematical functions without ” ***. ** ” descriptions.
 However, you have to keep a note of confusion avoidance. Suppose there is the same name in different modules, what is happing if you import them by “import *” with “from” method.  
   
 For example, the situation occurs in “numpy” and “math” indeed.  
@@ -505,7 +502,7 @@ import numpy as np
 pi=math.pi   
 x1=math.sin(pi/4)   
 x2=np.sin(pi/4)   
-x3=np.sin([0,pi/4,pi/2,3**pi/4])   
+x3=np.sin([0,pi/4,pi/2,3*pi/4])   
   
 print(x1)   
 print(x2)   
@@ -521,20 +518,19 @@ If you apply math.sin() to a list or matrix, you faced the error such as
 ---------------------------------------------------------------------------  
 TypeError                                 Traceback (most recent call last)  
 <ipython-input-11-c47a2d0560bb> in <module>()  
-----> 1 x1=math.sin([0,pi/4,pi/2,3**pi/4])  
+----> 1 x1=math.sin([0,pi/4,pi/2,3*pi/4])  
   
 TypeError: must be real number, not list  
 </code></pre>
 
 ***
 ## Assignment 1-3B:
-Explain a serious difference, error and mistake in the misuse of the function in other cases by making codes.
-(Please do not type your answer here. I will invite you in KWM (Key Words Meeting) Web)
+Explain a serious difference, error and mistake in the misuse of the function in other cases by making codes. 
 
 ***
 ### Note: “plt” and “np” are recommended to specify used modules
 
-In conclusion, python programmers usually use short names for abbreviations of modules names such as “plt,” “np” and so on, in the aim of avoidance of the misuse of functions. Therefore, I recommend you to follow the practical rules in python coding, except it is very basic module like math (at least from [module] import ** should be used only one time).  This action also helps smooth cross-validation with other programmers as colleagues in your team.  
+In conclusion, python programmers usually use short names for abbreviations of modules names such as “plt,” “np” and so on, in the aim of avoidance of the misuse of functions. Therefore, I recommend you to follow the practical rules in python coding, except it is very basic module like math (at least from [module] import * should be used only one time).  This action also helps smooth cross-validation with other programmers as colleagues in your team.  
   
 For further interests, I recommend you to read  
 page 25 (Japanese) and page 26 (English)  
@@ -564,7 +560,7 @@ https://programming-study.com/technology/python-import/
 ***
 ### Note: What does ‘.’ mean?
 
-You may be curious about ‘.’  in between the module name and function name in the form of [module name].[function name].
+You may be curious about ‘.’  in between the module name and function name in the form of [module name].[function name].  
 It is coming from the style of object-oriented programming language, such as C++ programming language.  
 
 If you are interested in more, you can see following sites:   
@@ -578,4 +574,4 @@ https://study.com/academy/lesson/oop-object-oriented-programming-objects-classes
 http://www.rsch.tuis.ac.jp/~ohmi/software-intro/objectoriented.html  
 https://26gram.com/what-is-object-oriented  
 https://www.sejuku.net/blog/6017  
-https://eng-entrance.com/what-oop  
+https://eng-entrance.com/what-oop
