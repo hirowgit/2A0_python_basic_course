@@ -19,98 +19,108 @@
 ----
 
 
-+*In[1]:*+
++*In[17]:*+
 [source, ipython3]
 ----
-# a string with single quotation marks
+# A string with single quotation marks
 'strawberry'
 ----
 
 
-+*Out[1]:*+
++*Out[17]:*+
 ----'strawberry'----
 
 
-+*In[6]:*+
++*In[18]:*+
 [source, ipython3]
 ----
-# a string with double quotation marks
+# A string with double quotation marks
+
 "strawberry"
 ----
 
 
-+*Out[6]:*+
++*Out[18]:*+
 ----'strawberry'----
 
 
-+*In[16]:*+
++*In[19]:*+
 [source, ipython3]
 ----
+# There is no output because of  ';'  for the termination.
+
 'strawberry';
 ----
 
 
-+*In[4]:*+
++*In[20]:*+
 [source, ipython3]
 ----
+# Therefore you need to use "print" function.
+
 print('strawberry');
 print( 'grape');
 ----
 
 
-+*Out[4]:*+
++*Out[20]:*+
 ----
 strawberry
 grape
 ----
 
 
-+*In[9]:*+
++*In[21]:*+
 [source, ipython3]
 ----
+# How to use quotation marks inside the string. 
+# Note: double quotation marks displayed at the beginning and end 
+
 'strawberry\'s cake'
 ----
 
 
-+*Out[9]:*+
++*Out[21]:*+
 ----"strawberry's cake"----
 
 
-+*In[13]:*+
++*In[22]:*+
 [source, ipython3]
 ----
+# But if you use double quotation marks inside the string,
+# single quotation marks displayed at the beginning and end, as well as the default mode.
+
 'I said \"hello\" to him.'
 ----
 
 
-+*Out[13]:*+
++*Out[22]:*+
 ----'I said "hello" to him.'----
 
 
-+*In[14]:*+
++*In[23]:*+
 [source, ipython3]
 ----
+# If you use both quotation marks inside the string,
+# single quotation marks displayed at the beginning and end.
+
 'I requested Mary\'s mother to say \"Please cook a special cake\".' 
 ----
 
 
-+*Out[14]:*+
++*Out[23]:*+
 ----'I requested Mary\'s mother to say "Please cook a special cake".'----
 
 
-+*In[15]:*+
++*In[24]:*+
 [source, ipython3]
 ----
+# Even both quotation marks are included with a different order,
+# single quotation marks displayed at the beginning and end consistently.
+
 'I said \"Please cook a special cake\" to Mary\'s mother.' 
 ----
 
 
-+*Out[15]:*+
++*Out[24]:*+
 ----'I said "Please cook a special cake" to Mary\'s mother.'----
-
-
-+*In[ ]:*+
-[source, ipython3]
-----
-
-----

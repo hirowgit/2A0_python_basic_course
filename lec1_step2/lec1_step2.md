@@ -18,7 +18,7 @@
 
 
 ```python
-# a string with single quotation marks
+# A string with single quotation marks
 'strawberry'
 ```
 
@@ -31,7 +31,8 @@
 
 
 ```python
-# a string with double quotation marks
+# A string with double quotation marks
+
 "strawberry"
 ```
 
@@ -44,11 +45,15 @@
 
 
 ```python
+# There is no output because of  ';'  for the termination.
+
 'strawberry';
 ```
 
 
 ```python
+# Therefore you need to use "print" function.
+
 print('strawberry');
 print( 'grape');
 ```
@@ -59,6 +64,9 @@ print( 'grape');
 
 
 ```python
+# How to use quotation marks inside the string. 
+# Note: double quotation marks displayed at the beginning and end 
+
 'strawberry\'s cake'
 ```
 
@@ -71,6 +79,9 @@ print( 'grape');
 
 
 ```python
+# But if you use double quotation marks inside the string,
+# single quotation marks displayed at the beginning and end, as well as the default mode.
+
 'I said \"hello\" to him.'
 ```
 
@@ -83,6 +94,9 @@ print( 'grape');
 
 
 ```python
+# If you use both quotation marks inside the string,
+# single quotation marks displayed at the beginning and end.
+
 'I requested Mary\'s mother to say \"Please cook a special cake\".' 
 ```
 
@@ -95,6 +109,9 @@ print( 'grape');
 
 
 ```python
+# Even both quotation marks are included with a different order,
+# single quotation marks displayed at the beginning and end consistently.
+
 'I said \"Please cook a special cake\" to Mary\'s mother.' 
 ```
 
@@ -104,8 +121,3 @@ print( 'grape');
     'I said "Please cook a special cake" to Mary\'s mother.'
 
 
-
-
-```python
-
-```
