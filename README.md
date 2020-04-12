@@ -30,11 +30,11 @@ https://www.w3schools.com/python/
 Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.
 
 You can find a method of how to use some specific command, funciton and data structures.
-https://www.w3schools.com/python/python_lists.asp
-
 
 #### Python Lists in w3schools.com
 Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.
+
+https://www.w3schools.com/python/python_lists.asp
 
 
 #### Python Tryit Editor v1.0 (w3schools.com)
@@ -54,7 +54,8 @@ print(fruits);
 
 ## What does mathematics we learn?
 
-This is a matrix 
+This is a matrix   
+(TeX format)
 \begin{pmatrix}
 a{11} & \cdots & a{1i} & \cdots & a{1n}\
 \vdots & \ddots &       &       & \vdots \
@@ -66,7 +67,7 @@ a{n1} & \cdots & a{ni} & \cdots & a_{nn}
 ![sample matrix1](mat1.png "sample matrix1")
 
 and we need to treat the operation as follows:
- 
+ (TeX format)
 \begin{pmatrix}
 a{11} & \cdots & a{1i} & \cdots & a{1n}\
 \vdots & \ddots &        &        & \vdots \
@@ -87,91 +88,80 @@ a{n1} & \cdots & a{ni} & \cdots & a{nn}
 
  
 ***
-# Introduction of Lecture 1
+# Introduction: Lecture 1
 
-Let’s start the course!!
+Let’s start the course!
 
-Let us start this lecture course. I offer tutorials in the aim of training  to contribute to enhance knowledge, abilities and skills toward data science such as solving optimization problems, biological data analyses, risk management and so on. In this aim, I need to emphasize the necessity of learning about matrix operation i.e. Linear algebra. In the case of Python programming, it means that you need python modules callded “numpy” (for matrix operations/linear algebra) and “panda” (statistics), which are already included in the anaconda package.
+Let us start this lecture course. I offer tutorials in the aim of training  to contribute to enhance knowledge, abilities and skills toward data science such as solving optimization problems, biological data analyses, risk management and so on. In this aim, I need to emphasize the necessity of learning about matrix operation i.e. Linear algebra. In the case of Python programming, it means that you need python modules callded “numpy” (for matrix operations/linear algebra) and “panda” (statistics), which are already included in the anaconda package.  
+
+*A Complete Beginners Guide to Matrix Multiplication for Data Science with Python Numpy
+Learn matrix multiplication for machine learning* 
 https://towardsdatascience.com/a-complete-beginners-guide-to-matrix-multiplication-for-data-science-with-python-numpy-9274ecfc1dc6
-
-Medium
-A Complete Beginners Guide to Matrix Multiplication for Data Science with Python Numpy
-Learn matrix multiplication for machine learning by following along with Python examples
-Reading time
-4 min read
  
 ***
 How to reinstall modules (English)
 
-If you have a trouble for updating  “numpy” and “panda” modules, you can see webpages to deal with the issues.
+If you have a trouble for updating  “numpy” and “panda” modules, you can see webpages to deal with the issues.  
+
+*Stack Overflow*
+*How to install numpy on windows using pip install?
+I want to install numpy using pip install numpy command but i get follwing error: RuntimeError: Broken toolchain: cannot link a simple C program I'm using windows 7 32bit, python 2.7.9, pip 6.1.1...*  
 https://stackoverflow.com/questions/29499815/how-to-install-numpy-on-windows-using-pip-install
 
-Stack Overflow
-How to install numpy on windows using pip install?
-I want to install numpy using pip install numpy command but i get follwing error: RuntimeError: Broken toolchain: cannot link a simple C program I'm using windows 7 32bit, python 2.7.9, pip 6.1.1...
- 
 ***
 How to reinstall modules (Japanese)
 
 For Japanese (or you can use Google chrome with English translation mode):
+
+*Qiita: AnacondaやAnaconda経由でPandas、numpyなどのパッケージをアップデートする方法 - Qiita*  
 https://qiita.com/i_jp/items/7f1bc432b262b11ff8fc
-
-Qiita
-AnacondaやAnaconda経由でPandas、numpyなどのパッケージをアップデートする方法 - Qiita
-以下のコマンドをコンソールから打つ。 私はAnaconda Promptを使ってます。 Anaconda自体のアップデート $ conda update -n base conda Anacondaの全パッケージのアップデ...
  
 ***
-Or other serious trouble fix:
-https://qiita.com/holygo/items/1644586ff283408b28e2
+Or other serious trouble fix method:
 
-Qiita
-Anacondaでnumpy, pandasをimportできなくなったら - Qiita
-せっかくの休日をこの問題のおかげで失うところだったので、同じような人が出ない様にメモ。 予想以上に日本語での情報が少なかったので。 【環境】 Windows10 Anaconda：5.0.0 Python：3.6.3 pycharm...
+*Qiita: Anacondaでnumpy, pandasをimportできなくなったら - Qiita*  
+ https://qiita.com/holygo/items/1644586ff283408b28e2
  
 ***
- Step1
+## Step1
 
-Please check whether a python compiler was successfully installed in your computer by using the following code:
+Please check whether a python compiler was successfully installed in your computer, by using the following code:
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step1.py#L25-L26
 
 lec1_step1.py:25-26
-<pre><code>fruits = ['strawberry', 'grape', 'tomato']; print(fruits); </code></pre>
+<pre><code>fruits = ['strawberry', 'grape', 'tomato'];  
+print(fruits); </code></pre>
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
- waga  2020-04-12 10:56:06
+
+
 Here is the result. If you can see the same result in your PC, the installation process was done successfully.
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step1/lec1_step1.txt#L32
 
 lec1_step1/lec1_step1.txt:32
 <pre><code>['strawberry', 'grape', 'tomato'] </code></pre>
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
- waga  2020-04-12 10:57:51
-Note: tomato is a vegetable but types of tomato in some countries like Japan and Korea are very sweet and the sugar content is high like fruits.
+
+***
+###Note: 
+tomato is a vegetable but types of tomato in some countries like Japan and Korea are very sweet and the sugar content is high like fruits.
+
+*Japanese Momotaro Tomatoes (specialtyproduce.com)* 
+*The Japanese Momotaro tomato is an oblate-shaped hybrid that typically weighs between six and seven ounces. Its skin is thick and pink with green shoulders around...*  
 https://specialtyproduce.com/produce/Japanese_Momotaro_Tomatoes_5032.php
 
-specialtyproduce.com
-Japanese Momotaro Tomatoes
-The Japanese Momotaro tomato is an oblate-shaped hybrid that typically weighs between six and seven ounces. Its skin is thick and pink with green shoulders around...
- 
 ***
-In Python, string data is treated with single quotation or double quotation marks i.e. ' or “.  In the rule, both are equivalent. Here I use single quotation because of the consistency with MATLAB. See in the tutorial course on MATLAB,
+In Python, string data is treated with single quotation or double quotation marks _i.e._ ' or “.  In the rule, both are equivalent. Here I use single quotation because of the consistency with MATLAB. See in the tutorial course on MATLAB,
+*hirowgit/1A_matlab_basic_course*  
 https://github.com/hirowgit/1A_matlab_basic_course
 
-hirowgit/1A_matlab_basic_course
-Language
-<p>HTML</p>
-Last updated
-<p>a day ago</p>
  <a href="https://github.com/hirowgit/1A_matlab_basic_course">hirowgit/1A_matlab_basic_course</a>
- waga  2020-04-12 11:40:35
-MATLAB programming course for beginners, supported by Wagatsuma Lab@Kyutech
+ 
+***
+*MATLAB programming course for beginners, supported by Wagatsuma Lab@Kyutech*  
 https://github.com/hirowgit/1A_matlab_basic_course/blob/master/README.md
 
-README.md
-<p>```</p> <h1>1A<em>matlab</em>basic_course</h1> <h1>MATLAB Install</h1> <p>There are ways to use MATLAB codes as follows:</p> <h3>1) Matlab Online</h3> <p>No installation into your PC physically, you can test codes in the web browser. <br /> <a href="https://www.mathworks.com/products/matlab-online.html">https://www.mathworks.com/products/matlab-online.html</a> <br /> Check your licence <a href="https://www.mathworks.com/products/matlab/student.html?s_tid=products_stu_version">https://www.mathworks.com/products/matlab/student.html?s_tid=products_stu_version</a> </p> <h3>2) Trial licence for 30 days</h3> <p><a href="https://www.mathworks.com/campaigns/products/trials.highResolutionDisplay.html">https://www.mathworks.com/campaigns/products/trials.highResolutionDisplay.html</a> </p> <h3>3) Comatible softwares</h3> <h4>** GNU Octave</h4> <p><a href="http://www.gnu.org/software/octave/">http://www.gnu.org/software/octave/</a> </p> <h4>** Scilab</h4> <p><a href="http://www.scilab.org/var/ezflow_site/storage/images/homepage_block_links/scilab/6583-1-fre-FR/">http://www.scilab.org/var/ezflow_site/storage/images/homepage_block_links/scilab/6583-1-fre-FR/</a> </p> <p>Note: GNU Octave is more compatible with the original. </p> <h1>Lecture 1</h1> <h2>example 1: draw a graph</h2> <p>figure(1); clf; t=0:0.1:2**pi; plot(t,sin(t));</p> <p>## example 2: iterate in a loop k=0; &lt;br&gt; for i=1:10&lt;br&gt; k=k+1;&lt;br&gt; disp(k);&lt;br&gt; end&lt;br&gt; &lt;br&gt; ---output---&lt;br&gt;</p> <p>1</p> <p>2</p> <p>3</p> <p>4</p> <p>5</p> <p>6</p> <p>7</p> <p>8</p> <p>9</p> <p>10</p> <h1>Lecture1: deal with a matrix to plot a graph</h1> <p><a href="https://github.com/hirowgit/1_matlab_basic_course">https://github.com/hirowgit/1_matlab_basic_course</a></p> <p>hirowgit/1<em>matlab</em>basic_course</p> <h1>Step 1</h1> <h2>How to make a matrix.</h2> <p>Let us start the lecture. Think about a natural number like 1,2,3,4,… more. In the first place, the programming is a kind of automation, or logical abstraction. You can design a matrix like [1,2,3,4, ….. N], where N represents the termination, and name “a.” It can be treated as this code. <a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step1.m#L34">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step1.m#L34</a></p> <p>lec1_step1.m:34 &lt;pre&gt;&lt;code&gt;a=[1,2,3,4] &lt;/code&gt;&lt;/pre&gt;</p> <h2>The result is here.</h2> <p><a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step1/lec1_step1.html#L71-L73">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step1/lec1_step1.html#L71-L73</a></p> <p>lec1<em>step1/lec1</em>step1.html:71-73 &lt;pre&gt;&lt;code&gt;a = 1 2 3 4 &lt;/code&gt;&lt;/pre&gt;</p> <h1>Step 2</h1> <h2>Other matrix notation</h2> <p>Similarly it can be written as follows: <a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step2.m#L33-L35">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step2.m#L33-L35</a></p> <p>lec1_step2.m:33-35 &lt;pre&gt;&lt;code&gt; a1=[1,2,3,4] </p> <p>a2=[1:4] </p> <p>a3=[1:1:4] &lt;/code&gt;&lt;/pre&gt;</p> <h2>Here is the result.</h2> <p><a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step2/lec1_step2.html#L73-L85">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step2/lec1_step2.html#L73-L85</a></p> <p>lec1<em>step2/lec1</em>step2.html:73-85 &lt;pre&gt;&lt;code&gt; a1 = </p> <p>1 2 3 4 </p> <p>a2 = </p> <p>1 2 3 4 </p> <p>a3 = </p> <p>1 2 3 4 &lt;/code&gt;&lt;/pre&gt;</p> <h2>Comment</h2> <p>All codes generate the same result but those meanings are different. The first one is the basic type, but you have to type every numbers. In the second one, a kind of automation was realized, which means that you just type starting and ending numbers only. You can save your energy. The third case is an extension. You may have a further doubt when you see the second one. Thus, “why does the number increase at intervals of “1” ? Yes, this is the right question. You can control the step by adding more “:” for example 1: 3: 15, or 0: 0.5: 10.</p> <h2>Assignment 1-2:</h2> <p>Make type matrices as even number (evennum) and odd numbers (oddnum).</p> <h1>Step 3</h1> <h2>Display the result</h2> <p>According to the description rule of MATLAB, “;” represents termination of the single line code. Therefore you usually type the code “;” at the end of the line to terminate, while the line works well without the termination code. If you skip the code, the system outputs the result of the single line to the command line window. This function is practically used for debugging. For example, if you find some error in the program, you can temporally remove the termination code to check calculation results prior to the target point when the error occurred. Please compare the descriptions in lec1step2.m (L33-L35) and lec1step3.m.</p> <p><a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step3.m#L34-L41">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step3.m#L34-L41</a></p> <p>lec1_step3.m:34-41 &lt;pre&gt;&lt;code&gt; a1=[1,2,3,4]; </p> <p>a2=[1:4]; </p> <p>a3=[1:1:4]; </p> <p>disp(a1); </p> <p>disp(a2);</p> <p>disp(a3); &lt;/code&gt;&lt;/pre&gt;</p> <p>The function “disp” output the result to the command line window.</p> <h2>Here is the result.</h2> <p><a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step3/lec1_step3.html#L78-L80">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step3/lec1_step3.html#L78-L80</a></p> <p>lec1<em>step3/lec1</em>step3.html:78-80 &lt;pre&gt;&lt;code&gt; 1 2 3 4 </p> <p>1 2 3 4 </p> <p>1 2 3 4 &lt;/code&gt;&lt;/pre&gt;</p> <p>However there is no description of each prefix like “a1 =“, “a2 =” and “a3 =“. If you want to add some kind of descriptions about names of variables, you can add like disp([‘a1 = ’, a1]); Or fprintf(‘a1 = [%d %d %d %d]\r\n’,a), as C programming language style. [‘a1 = ’, a1] means that a concatenation of two items into a matrix.</p> <h2>Assignment 1-3:</h2> <p>Explain the functional difference between fprintf(‘a1 = %d \r\n’,a) and fprintf(‘a1 = %d %d %d %d\r\n’,a), if a=[1 2 3 4].</p> <h2>Assignment 1-4A:</h2> <p>In reference to the code lec1_step4.m generates a following matrix,</p> <p>1.0000 2.0000 3.0000 4.0000 5.0000 6.0000 7.0000 … 10.0000&lt;br&gt; 0.6499 0.8942 0.7904 0.0114 0.6350 0.0614 0.4116 … 0.7793&lt;br&gt; &lt;br&gt; modify the code to generate the matrix consisting of integer numbers, like&lt;br&gt; 1 2 3 4 …&lt;br&gt; 7 3 1 9 …&lt;br&gt; by considering arithmetic operations with “rand” function without any other MATLAB functions except “round” and “floor” functions.</p> <p>&lt;br&gt; <a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step4.m#L34-L39">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step4.m#L34-L39</a></p> <p>lec1_step4.m:34-39 &lt;pre&gt;&lt;code&gt; step=1:10; </p> <p>data=rand(1,length(step)); </p> <p>merged_data=[step; data]; </p> <p>disp(merged_data); &lt;/code&gt;&lt;/pre&gt;</p> <h2>Assignment 1-4B:</h2> <p>With respect to a following matrix,&lt;br&gt; &lt;br&gt; 1 2 3 4 …&lt;br&gt; 7 3 1 9 …&lt;br&gt; &lt;br&gt; make a program to sort by second line, such as&lt;br&gt; 3 2 1 4 …&lt;br&gt; 1 3 7 9 …&lt;br&gt; &lt;br&gt; by using “sortrows” function.&lt;br&gt;</p> <p><a href="https://www.mathworks.com/help/matlab/ref/double.sortrows.html">https://www.mathworks.com/help/matlab/ref/double.sortrows.html</a></p> <p><a href="http://mathworks.com">mathworks.com</a> Sort rows of matrix or table - MATLAB sortrows This MATLAB function sorts the rows of a matrix in ascending order based on the elements in the first column.</p> <h1>Step 5</h1> <h2>Plot data</h2> <p>This is an example to plot a sequential data, i.e. temporal sequence, with a modifiable step width “dt.” <a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step53.m#L34-L40">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step53.m#L34-L40</a></p> <p>lec1_step53.m:34-40 &lt;pre&gt;&lt;code&gt; dt=0.01; </p> <p>t=0:dt:2**pi; </p> <p>figure(1); clf; </p> <p>plot(t,sin(t),'.-'); </p> <p>grid on; </p> <p>&lt;/code&gt;&lt;/pre&gt;</p> <h2>Here is the result.</h2> <p><a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step53/lec1_step53_01.png">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step53/lec1_step53_01.png</a></p> <p><img src="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step53/lec1_step53_01.png" alt="lec1<em>step53</em>01.png" title="lec1_step53_01.png" /></p> <h2>Assignment 1-5A:</h2> <p>Analyze what happing around 0 if the target function is defined as sin(1/x) by changing the step in the horizontal axis.</p> <h1>Step 6</h1> <h2>Plot data with noise</h2> <p>This is an example to plot a sequential data after adding noise, with a modifiable level of noise by “noise_level.” <a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step63.m#L35-L44">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step63.m#L35-L44</a></p> <p>lec1_step63.m:35-44 &lt;pre&gt;&lt;code&gt; dt=0.01;</p> <p>noise_level=0.1; </p> <p>t=0:dt:2**pi; </p> <p>data=noise_level.<strong>(rand(1,length(t)).</strong>2-1); </p> <p>figure(1); clf; </p> <p>plot(t,sin(t),'b.-'), hold on; </p> <p>plot(t,data+sin(t),'r.'); grid on; </p> <p>&lt;/code&gt;&lt;/pre&gt;</p> <h2>Assignment 1-6A:</h2> <p>Explain the reason why arithmetic operations with “rand” function is necessary in the case of “(rand(1,length(t)).2-1)” ** <a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step63.m#L37">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step63.m#L37</a></p> <p>lec1<em>step63.m:37 &lt;pre&gt;&lt;code&gt;data=noise</em>level.<strong>(rand(1,length(t)).</strong>2-1); &lt;/code&gt;&lt;/pre&gt;</p> <h2>Hint:</h2> <p>compare the code “lec1_step62.m.” <a href="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step62/lec1_step62_01.png">https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step62/lec1_step62_01.png</a></p> <p><img src="https://github.com/hirowgit/1_matlab_basic_course/blob/master/lec1_step62/lec1_step62_01.png" alt="lec1<em>step62</em>01.png" title="lec1_step62_01.png" /></p> <h2>Assignment 1-…</h2>
- <a href="https://github.com/hirowgit/1A_matlab_basic_course">hirowgit/1A_matlab_basic_course</a>
-
 ***
- Step2 Difference of quotation marks in Python
+## Step2 Difference of quotation marks in Python
 
 As I said, there is no difference of quotation marks functionally and therefore you can use either one as you like.
 Technically a minor difference exists in the compiler, i.e. visualization.
