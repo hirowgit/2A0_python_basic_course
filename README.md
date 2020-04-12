@@ -2,28 +2,22 @@
 # Python install
 Note: Please use python3.x! (currently I have used python 3.7 on 2020/04/11)
 
-1) Original methods
-https://realpython.com/installing-python/#step-1-download-the-python-3-installer
-https://packaging.python.org/tutorials/installing-packages/
+1) Original methods  
+https://realpython.com/installing-python/#step-1-download-the-python-3-installer  
+https://packaging.python.org/tutorials/installing-packages/  
 
-2) By Anaconda packages
-https://docs.anaconda.com/anaconda/install/
-
-realpython.com
-Python 3 Installation &amp; Setup Guide – Real Python
-In this Python installation guide you'll see step by step how to get a working Python 3 distribution set up on Windows, macOS, Linux, iOS, and Android.
+2) By Anaconda packages  
+https://docs.anaconda.com/anaconda/install/  
  
 ***
-Recently the installation by the Anaconda package is getting popular especially for novice engineers toward data scientists, because python modules related to data science will be installed simultaneously.
+Recently the installation by the Anaconda package is getting popular. Especially for novice engineers toward data scientists. It is because python modules related to data science will be installed simultaneously.
 
 https://docs.anaconda.com/anaconda/packages/pkg-docs/
 
 For Japanese:
+AnacondaでPython3をインストール(Windows/Mac編) (ai-inter1.com) 
 https://ai-inter1.com/python-install/
-
-ai-inter1.com
-AnacondaでPython3をインストール(Windows/Mac編)
-Anaconda、Jupyter Notebookを利用したPython3の環境構築方法を初心者向けに解説した記事
+\ Anaconda、Jupyter Notebookを利用したPython3の環境構築方法を初心者向けに解説した記事
  
 ***
 ## Guide & tutorial for python learners:
