@@ -25,6 +25,12 @@
 'strawberry'
 
 
+# In[6]:
+
+
+"strawberry"
+
+
 # In[2]:
 
 
@@ -43,6 +49,30 @@
 
 print('strawberry');
 print( 'grape');
+
+
+# In[9]:
+
+
+'strawberry\'s cake'
+
+
+# In[13]:
+
+
+'I said \"hello\" to him.'
+
+
+# In[14]:
+
+
+'I requested Mary\'s mother to say \"Please cook a special cake\".' 
+
+
+# In[15]:
+
+
+'I said \"Please cook a special cake\" to Mary\'s mother.' 
 
 
 # In[ ]:

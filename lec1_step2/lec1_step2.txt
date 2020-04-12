@@ -30,6 +30,17 @@
 ----'strawberry'----
 
 
++*In[6]:*+
+[source, ipython3]
+----
+"strawberry"
+----
+
+
++*Out[6]:*+
+----'strawberry'----
+
+
 +*In[2]:*+
 [source, ipython3]
 ----
@@ -62,6 +73,50 @@ print( 'grape');
 strawberry
 grape
 ----
+
+
++*In[9]:*+
+[source, ipython3]
+----
+'strawberry\'s cake'
+----
+
+
++*Out[9]:*+
+----"strawberry's cake"----
+
+
++*In[13]:*+
+[source, ipython3]
+----
+'I said \"hello\" to him.'
+----
+
+
++*Out[13]:*+
+----'I said "hello" to him.'----
+
+
++*In[14]:*+
+[source, ipython3]
+----
+'I requested Mary\'s mother to say \"Please cook a special cake\".' 
+----
+
+
++*Out[14]:*+
+----'I requested Mary\'s mother to say "Please cook a special cake".'----
+
+
++*In[15]:*+
+[source, ipython3]
+----
+'I said \"Please cook a special cake\" to Mary\'s mother.' 
+----
+
+
++*Out[15]:*+
+----'I said "Please cook a special cake" to Mary\'s mother.'----
 
 
 +*In[ ]:*+

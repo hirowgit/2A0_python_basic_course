@@ -30,6 +30,18 @@
 
 
 ```python
+"strawberry"
+```
+
+
+
+
+    'strawberry'
+
+
+
+
+```python
 'strawberry';
 ```
 
@@ -54,6 +66,54 @@ print( 'grape');
 
     strawberry
     grape
+
+
+
+```python
+'strawberry\'s cake'
+```
+
+
+
+
+    "strawberry's cake"
+
+
+
+
+```python
+'I said \"hello\" to him.'
+```
+
+
+
+
+    'I said "hello" to him.'
+
+
+
+
+```python
+'I requested Mary\'s mother to say \"Please cook a special cake\".' 
+```
+
+
+
+
+    'I requested Mary\'s mother to say "Please cook a special cake".'
+
+
+
+
+```python
+'I said \"Please cook a special cake\" to Mary\'s mother.' 
+```
+
+
+
+
+    'I said "Please cook a special cake" to Mary\'s mother.'
+
 
 
 
