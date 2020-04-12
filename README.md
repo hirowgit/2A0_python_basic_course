@@ -145,7 +145,7 @@ lec1_step1/lec1_step1.txt:32
 ### Note: 
 tomato is a vegetable but types of tomato in some countries like Japan and Korea are very sweet and the sugar content is high like fruits.
 
-*Japanese Momotaro Tomatoes (specialtyproduce.com)* 
+*Japanese Momotaro Tomatoes (specialtyproduce.com)*   
 *The Japanese Momotaro tomato is an oblate-shaped hybrid that typically weighs between six and seven ounces. Its skin is thick and pink with green shoulders around...*  
 https://specialtyproduce.com/produce/Japanese_Momotaro_Tomatoes_5032.php
 
@@ -226,14 +226,14 @@ https://hirowgit.github.io/2A_python_basic_course/lec1_step2/lec1_step2.html
 This is a short review:
 
 +In[21]:+
-<pre><code>
 _How to use quotation marks inside the string._  
 _Note: double quotation marks displayed at the beginning and end_  
-’strawberry\‘s cake’  
+<pre><code>
+'strawberry\'s cake'  
 </code></pre>
 
 +Out[21]:+
-“strawberry’s cake”
+"strawberry's cake"
 
 +In[22]:+
 
@@ -241,18 +241,44 @@ But if you use double quotation marks inside the string,
 
 single quotation marks displayed at the beginning and end, as well as the default mode.
 
-‘I said \“hello\” to him.’
+'I said \"hello\" to him.'
 
 +Out[22]:+
-‘I said “hello” to him.’
+'I said "hello" to him.'
 
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step2/lec1_step2.txt#L73-L126
 
 lec1_step2/lec1_step2.txt:73-126
-<pre><code>+**In[21]:**+ [source, ipython3] ---- # How to use quotation marks inside the string. # Note: double quotation marks displayed at the beginning and end 'strawberry\'s cake' ---- +**Out[21]:**+ ----"strawberry's cake"---- +**In[22]:**+ [source, ipython3] ---- # But if you use double quotation marks inside the string, # single quotation marks displayed at the beginning and end, as well as the default mode. 'I said \"hello\" to him.' ---- +**Out[22]:**+ ----'I said "hello" to him.'---- +**In[23]:**+ [source, ipython3] ---- # If you use both quotation marks inside the string, # single quotation marks displayed at the beginning and end. 'I requested Mary\'s mother to say \"Please cook a special cake\".' ---- +**Out[23]:**+ ----'I requested Mary\'s mother to say "Please cook a special cake".'---- +**In[24]:**+ [source, ipython3] ---- # Even both quotation marks are included with a different order, # single quotation marks displayed at the beginning and end consistently. 'I said \"Please cook a special cake\" to Mary\'s mother.' ---- +**Out[24]:**+ ----'I said "Please cook a special cake" to Mary\'s mother.'---- </code></pre>
- <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
- waga  2020-04-12 13:39:32
- Step3 Import necessary modules for data science
+<pre><code>
+*In[21]:*  
+# How to use quotation marks inside the string. # Note: double quotation marks displayed at the beginning and end 'strawberry\'s cake'   
+
+*Out[21]:*     
+"strawberry's cake"  
+
+*In[22]:*    
+# But if you use double quotation marks inside the string, # single quotation marks displayed at the beginning and end, as well as the default mode. 'I said \"hello\" to him.'   
+
+*Out[22]:*     
+'I said "hello" to him.'  
+
+*In[23]:*    
+# If you use both quotation marks inside the string, # single quotation marks displayed at the beginning and end. 'I requested Mary\'s mother to say \"Please cook a special cake\".'   
+
+*Out[23]:*     
+'I requested Mary\'s mother to say "Please cook a special cake".'  
+
+*In[24]:*    
+# Even both quotation marks are included with a different order, # single quotation marks displayed at the beginning and end consistently. 'I said \"Please cook a special cake\" to Mary\'s mother.'   
+
+*Out[24]:*     
+'I said "Please cook a special cake" to Mary\'s mother.'  
+</code></pre>
+<a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>  
+
+
+***
+## Step3 Import necessary modules for data science
 
 As I said, I introduce you a MATLAB compatible usage with Python here. In this sense, firstly, we need modules of “math” (pi), “numpy” (matrix operation), pandas (statistics) and “matplotlib” (MATLAB like plotting for the visualization).
 And then you need to add the following code in the beginning.
