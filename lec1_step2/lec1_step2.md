@@ -1,21 +1,45 @@
 
 
 ```python
-fruits = ['strawberry', 'grape', 'tomato'];
-print(fruits);
+'strawberry'
 ```
 
-    ['strawberry', 'grape', 'tomato']
+
+
+
+    'strawberry'
+
 
 
 
 ```python
-fruits = ['strawberry', 'grape', 'tomato'];
-for x in fruits:
-  print(x)
+'strawberry';
+```
+
+
+```python
+'strawberry'
+'grape'
+```
+
+
+
+
+    'grape'
+
+
+
+
+```python
+print('strawberry');
+print( 'grape');
 ```
 
     strawberry
     grape
-    tomato
 
+
+
+```python
+
+```
