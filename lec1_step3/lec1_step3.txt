@@ -19,9 +19,11 @@
 ----
 
 
-+*In[8]:*+
++*In[10]:*+
 [source, ipython3]
 ----
+# module test: if you have an error when you run this code, you need to check the installation status of those modules
+
 import math 
 import numpy as np
 import pandas as pd
@@ -29,42 +31,7 @@ import matplotlib.pyplot as plt
 ----
 
 
-+*In[2]:*+
-[source, ipython3]
-----
-x = np.arange(-3, 3, 0.1)
-y = np.sin(x)
-plt.plot(x, y)
-----
-
-
-+*Out[2]:*+
-----[<matplotlib.lines.Line2D at 0x111cc7dd0>]
-![png](lec1_step3_files/lec1_step3_2_1.png)
-----
-
-
-+*In[5]:*+
-[source, ipython3]
-----
-s = pd.Series([2, 4, 6, np.nan, 7, 9])
-print(s)
-----
-
-
-+*Out[5]:*+
-----
-0    2.0
-1    4.0
-2    6.0
-3    NaN
-4    7.0
-5    9.0
-dtype: float64
-----
-
-
-+*In[9]:*+
++*In[11]:*+
 [source, ipython3]
 ----
 import math 
@@ -73,9 +40,44 @@ print(pi)
 ----
 
 
-+*Out[9]:*+
++*Out[11]:*+
 ----
 3.141592653589793
+----
+
+
++*In[15]:*+
+[source, ipython3]
+----
+x = np.arange(-3.14, 3.14, 0.1)
+y = np.sin(x)
+plt.plot(x, y)
+----
+
+
++*Out[15]:*+
+----[<matplotlib.lines.Line2D at 0x114c5b950>]
+![png](lec1_step3_files/lec1_step3_3_1.png)
+----
+
+
++*In[16]:*+
+[source, ipython3]
+----
+s = pd.Series([2, 4, 6, np.nan, 7, 9])
+print(s)
+----
+
+
++*Out[16]:*+
+----
+0    2.0
+1    4.0
+2    6.0
+3    NaN
+4    7.0
+5    9.0
+dtype: float64
 ----
 
 

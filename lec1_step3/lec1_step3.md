@@ -18,6 +18,8 @@
 
 
 ```python
+# module test: if you have an error when you run this code, you need to check the installation status of those modules
+
 import math 
 import numpy as np
 import pandas as pd
@@ -26,7 +28,17 @@ import matplotlib.pyplot as plt
 
 
 ```python
-x = np.arange(-3, 3, 0.1)
+import math 
+pi=math.pi
+print(pi)
+```
+
+    3.141592653589793
+
+
+
+```python
+x = np.arange(-3.14, 3.14, 0.1)
 y = np.sin(x)
 plt.plot(x, y)
 ```
@@ -34,12 +46,12 @@ plt.plot(x, y)
 
 
 
-    [<matplotlib.lines.Line2D at 0x111cc7dd0>]
+    [<matplotlib.lines.Line2D at 0x114c5b950>]
 
 
 
 
-![png](lec1_step3_files/lec1_step3_2_1.png)
+![png](lec1_step3_files/lec1_step3_3_1.png)
 
 
 
@@ -55,16 +67,6 @@ print(s)
     4    7.0
     5    9.0
     dtype: float64
-
-
-
-```python
-import math 
-pi=math.pi
-print(pi)
-```
-
-    3.141592653589793
 
 
 
