@@ -19,8 +19,10 @@
 # # @File    : lec1_step3.py 
 
 
-# In[8]:
+# In[10]:
 
+
+# module test: if you have an error when you run this code, you need to check the installation status of those modules
 
 import math 
 import numpy as np
@@ -28,27 +30,27 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# In[2]:
-
-
-x = np.arange(-3, 3, 0.1)
-y = np.sin(x)
-plt.plot(x, y)
-
-
-# In[5]:
-
-
-s = pd.Series([2, 4, 6, np.nan, 7, 9])
-print(s)
-
-
-# In[9]:
+# In[11]:
 
 
 import math 
 pi=math.pi
 print(pi)
+
+
+# In[15]:
+
+
+x = np.arange(-3.14, 3.14, 0.1)
+y = np.sin(x)
+plt.plot(x, y)
+
+
+# In[16]:
+
+
+s = pd.Series([2, 4, 6, np.nan, 7, 9])
+print(s)
 
 
 # In[ ]:
