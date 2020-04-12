@@ -1,6 +1,6 @@
 ***
 # Python install
-Note! Please use python3.x! (currently I have used python 3.7 on 2020/04/11)
+Note: Please use python3.x! (currently I have used python 3.7 on 2020/04/11)
 
 1) Original methods
 https://realpython.com/installing-python/#step-1-download-the-python-3-installer
@@ -15,9 +15,9 @@ In this Python installation guide you'll see step by step how to get a working P
  
 ***
 Recently the installation by the Anaconda package is getting popular especially for novice engineers toward data scientists, because python modules related to data science will be installed simultaneously.
+
 https://docs.anaconda.com/anaconda/packages/pkg-docs/
 
-***
 For Japanese:
 https://ai-inter1.com/python-install/
 
@@ -26,37 +26,41 @@ AnacondaでPython3をインストール(Windows/Mac編)
 Anaconda、Jupyter Notebookを利用したPython3の環境構築方法を初心者向けに解説した記事
  
 ***
-Guide & tutorial for python learners:
+## Guide & tutorial for python learners:
 w3chools.com is very kind for learners of various programming languages.
 Python Tutorial is also fine for you.
 https://www.w3schools.com/python/
 
-w3schools.com
-Python Tutorial
+
+### Python Tutorial in w3schools.com
 Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.
- waga  2020-04-11 19:39:37
+
 You can find a method of how to use some specific command, funciton and data structures.
 https://www.w3schools.com/python/python_lists.asp
 
-w3schools.com
-Python Lists
+
+#### Python Lists in w3schools.com
 Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.
- waga  2020-04-11 19:44:34
+
+
+#### Python Tryit Editor v1.0 (w3schools.com)
 This is an example of how to use “list” in python.
 You can push the green button “Try it Yourself” and try to run the code in the web browser even without the installation.
+
 https://www.w3schools.com/python/trypython.asp?filename=demo_list
 
-w3schools.com
-Python Tryit Editor v1.0
- 
+
 ***
+## An example 
 This is a sample code to use the list:
 
 fruits = [‘strawberry’, ‘grape’, ‘tomato’];
 
 print(fruits);
 
-LaTeX  2020-04-12 07:58:05
+## What does mathematics we learn?
+
+This is a matrix 
 \begin{pmatrix}
 a{11} & \cdots & a{1i} & \cdots & a{1n}\
 \vdots & \ddots &       &       & \vdots \
@@ -67,8 +71,8 @@ a{n1} & \cdots & a{ni} & \cdots & a_{nn}
 
 ![sample matrix1](mat1.png "sample matrix1")
 
+and we need to treat the operation as follows:
  
- LaTeX  2020-04-12 08:00:26
 \begin{pmatrix}
 a{11} & \cdots & a{1i} & \cdots & a{1n}\
 \vdots & \ddots &        &        & \vdots \
