@@ -22,6 +22,7 @@
 +*In[1]:*+
 [source, ipython3]
 ----
+# a string with single quotation marks
 'strawberry'
 ----
 
@@ -33,6 +34,7 @@
 +*In[6]:*+
 [source, ipython3]
 ----
+# a string with double quotation marks
 "strawberry"
 ----
 
@@ -41,23 +43,11 @@
 ----'strawberry'----
 
 
-+*In[2]:*+
++*In[16]:*+
 [source, ipython3]
 ----
 'strawberry';
 ----
-
-
-+*In[3]:*+
-[source, ipython3]
-----
-'strawberry'
-'grape'
-----
-
-
-+*Out[3]:*+
-----'grape'----
 
 
 +*In[4]:*+

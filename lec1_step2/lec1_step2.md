@@ -18,6 +18,7 @@
 
 
 ```python
+# a string with single quotation marks
 'strawberry'
 ```
 
@@ -30,6 +31,7 @@
 
 
 ```python
+# a string with double quotation marks
 "strawberry"
 ```
 
@@ -44,19 +46,6 @@
 ```python
 'strawberry';
 ```
-
-
-```python
-'strawberry'
-'grape'
-```
-
-
-
-
-    'grape'
-
-
 
 
 ```python

@@ -22,26 +22,21 @@
 # In[1]:
 
 
+# a string with single quotation marks
 'strawberry'
 
 
 # In[6]:
 
 
+# a string with double quotation marks
 "strawberry"
 
 
-# In[2]:
+# In[16]:
 
 
 'strawberry';
-
-
-# In[3]:
-
-
-'strawberry'
-'grape'
 
 
 # In[4]:
