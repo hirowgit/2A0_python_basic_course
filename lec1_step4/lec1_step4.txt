@@ -1,0 +1,148 @@
+
+
++*In[2]:*+
+[source, ipython3]
+----
+# Different types of loading methods 
+import math 
+
+pi=math.pi
+
+print(pi)
+----
+
+
++*Out[2]:*+
+----
+3.141592653589793
+----
+
+
++*In[7]:*+
+[source, ipython3]
+----
+# module loading with an abbreviation i.e. short name
+import math as mm
+
+pi=mm.pi
+
+print(pi)
+----
+
+
++*Out[7]:*+
+----
+3.141592653589793
+----
+
+
++*In[9]:*+
+[source, ipython3]
+----
+# How to use various functions in the module
+import math 
+
+pi=math.pi
+x1=math.sin(pi/2)
+
+print(pi)
+print(x1)
+----
+
+
++*Out[9]:*+
+----
+3.141592653589793
+1.0
+----
+
+
++*In[13]:*+
+[source, ipython3]
+----
+# Different types of loading methods 
+import math 
+
+pi=math.pi
+x1=math.sin(pi/2)
+x2=math.cos(0)
+x3=math.tan(pi/4)
+
+print(pi)
+print(x1)
+print(x2)
+print(x3)
+----
+
+
++*Out[13]:*+
+----
+3.141592653589793
+1.0
+1.0
+0.9999999999999999
+----
+
+
++*In[14]:*+
+[source, ipython3]
+----
+# Different types of loading methods 
+from math import pi 
+from math import sin 
+from math import cos
+from math import tan
+
+#pi=math.pi
+x1=sin(pi/2)
+x2=cos(0)
+x3=tan(pi/4)
+
+print(pi)
+print(x1)
+print(x2)
+print(x3)
+----
+
+
++*Out[14]:*+
+----
+3.141592653589793
+1.0
+1.0
+0.9999999999999999
+----
+
+
++*In[15]:*+
+[source, ipython3]
+----
+# Different types of loading methods 
+from math import *
+
+#pi=math.pi
+x1=sin(pi/2)
+x2=cos(0)
+x3=tan(pi/4)
+
+print(pi)
+print(x1)
+print(x2)
+print(x3)
+----
+
+
++*Out[15]:*+
+----
+3.141592653589793
+1.0
+1.0
+0.9999999999999999
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
