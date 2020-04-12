@@ -1,17 +1,34 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[1]:
+
+
+'strawberry'
+
+
 # In[2]:
 
 
-fruits = ['strawberry', 'grape', 'tomato'];
-print(fruits);
+'strawberry';
 
 
 # In[3]:
 
 
-fruits = ['strawberry', 'grape', 'tomato'];
-for x in fruits:
-  print(x)
+'strawberry'
+'grape'
+
+
+# In[4]:
+
+
+print('strawberry');
+print( 'grape');
+
+
+# In[ ]:
+
+
+
 
