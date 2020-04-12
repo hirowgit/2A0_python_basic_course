@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
@@ -19,7 +19,14 @@
 # # @File    : lec1_step3.py 
 
 
-# In[10]:
+# In[2]:
+
+
+# running without modules on mathematics
+pi
+
+
+# In[3]:
 
 
 # module test: if you have an error when you run this code, you need to check the installation status of those modules
@@ -30,7 +37,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# In[11]:
+# In[4]:
 
 
 import math 
@@ -38,7 +45,7 @@ pi=math.pi
 print(pi)
 
 
-# In[15]:
+# In[5]:
 
 
 x = np.arange(-3.14, 3.14, 0.1)
@@ -46,7 +53,7 @@ y = np.sin(x)
 plt.plot(x, y)
 
 
-# In[16]:
+# In[6]:
 
 
 s = pd.Series([2, 4, 6, np.nan, 7, 9])

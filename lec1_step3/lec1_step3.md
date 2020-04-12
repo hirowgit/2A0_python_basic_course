@@ -18,6 +18,24 @@
 
 
 ```python
+# running without modules on mathematics
+pi
+```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-2-f84ab820532c> in <module>()
+    ----> 1 pi
+    
+
+    NameError: name 'pi' is not defined
+
+
+
+```python
 # module test: if you have an error when you run this code, you need to check the installation status of those modules
 
 import math 
@@ -46,12 +64,12 @@ plt.plot(x, y)
 
 
 
-    [<matplotlib.lines.Line2D at 0x114c5b950>]
+    [<matplotlib.lines.Line2D at 0x118ea2310>]
 
 
 
 
-![png](lec1_step3_files/lec1_step3_3_1.png)
+![png](lec1_step3_files/lec1_step3_4_1.png)
 
 
 

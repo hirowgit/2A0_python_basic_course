@@ -1,6 +1,6 @@
 
 
-+*In[ ]:*+
++*In[1]:*+
 [source, ipython3]
 ----
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
@@ -19,7 +19,31 @@
 ----
 
 
-+*In[10]:*+
++*In[2]:*+
+[source, ipython3]
+----
+# running without modules on mathematics
+pi
+----
+
+
++*Out[2]:*+
+----
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-2-f84ab820532c> in <module>()
+    ----> 1 pi
+    
+
+    NameError: name 'pi' is not defined
+
+----
+
+
++*In[3]:*+
 [source, ipython3]
 ----
 # module test: if you have an error when you run this code, you need to check the installation status of those modules
@@ -31,7 +55,7 @@ import matplotlib.pyplot as plt
 ----
 
 
-+*In[11]:*+
++*In[4]:*+
 [source, ipython3]
 ----
 import math 
@@ -40,13 +64,13 @@ print(pi)
 ----
 
 
-+*Out[11]:*+
++*Out[4]:*+
 ----
 3.141592653589793
 ----
 
 
-+*In[15]:*+
++*In[5]:*+
 [source, ipython3]
 ----
 x = np.arange(-3.14, 3.14, 0.1)
@@ -55,13 +79,13 @@ plt.plot(x, y)
 ----
 
 
-+*Out[15]:*+
-----[<matplotlib.lines.Line2D at 0x114c5b950>]
-![png](lec1_step3_files/lec1_step3_3_1.png)
++*Out[5]:*+
+----[<matplotlib.lines.Line2D at 0x118ea2310>]
+![png](lec1_step3_files/lec1_step3_4_1.png)
 ----
 
 
-+*In[16]:*+
++*In[6]:*+
 [source, ipython3]
 ----
 s = pd.Series([2, 4, 6, np.nan, 7, 9])
@@ -69,7 +93,7 @@ print(s)
 ----
 
 
-+*Out[16]:*+
++*Out[6]:*+
 ----
 0    2.0
 1    4.0
