@@ -19,59 +19,70 @@
 # # @File    : lec1_step2.py 
 
 
-# In[1]:
+# In[17]:
 
 
-# a string with single quotation marks
+# A string with single quotation marks
 'strawberry'
 
 
-# In[6]:
+# In[18]:
 
 
-# a string with double quotation marks
+# A string with double quotation marks
+
 "strawberry"
 
 
-# In[16]:
+# In[19]:
 
+
+# There is no output because of  ';'  for the termination.
 
 'strawberry';
 
 
-# In[4]:
+# In[20]:
 
+
+# Therefore you need to use "print" function.
 
 print('strawberry');
 print( 'grape');
 
 
-# In[9]:
+# In[21]:
 
+
+# How to use quotation marks inside the string. 
+# Note: double quotation marks displayed at the beginning and end 
 
 'strawberry\'s cake'
 
 
-# In[13]:
+# In[22]:
 
+
+# But if you use double quotation marks inside the string,
+# single quotation marks displayed at the beginning and end, as well as the default mode.
 
 'I said \"hello\" to him.'
 
 
-# In[14]:
+# In[23]:
 
+
+# If you use both quotation marks inside the string,
+# single quotation marks displayed at the beginning and end.
 
 'I requested Mary\'s mother to say \"Please cook a special cake\".' 
 
 
-# In[15]:
+# In[24]:
 
+
+# Even both quotation marks are included with a different order,
+# single quotation marks displayed at the beginning and end consistently.
 
 'I said \"Please cook a special cake\" to Mary\'s mother.' 
-
-
-# In[ ]:
-
-
-
 
