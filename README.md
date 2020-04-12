@@ -142,7 +142,7 @@ lec1_step1/lec1_step1.txt:32
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
 
 ***
-###Note: 
+### Note: 
 tomato is a vegetable but types of tomato in some countries like Japan and Korea are very sweet and the sugar content is high like fruits.
 
 *Japanese Momotaro Tomatoes (specialtyproduce.com)* 
@@ -164,7 +164,7 @@ https://github.com/hirowgit/1A_matlab_basic_course/blob/master/README.md
 ## Step2 Difference of quotation marks in Python
 
 As I said, there is no difference of quotation marks functionally and therefore you can use either one as you like.
-Technically a minor difference exists in the compiler, i.e. visualization.
+Technically a minor difference exists in the compiler, _i.e._ visualization.
 
 If you type ‘a’ and “a” to compare, the system replies ‘a’ and ‘a’ in the same way.
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step2.py#L26
@@ -172,21 +172,23 @@ https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step2.py#L26
 lec1_step2.py:26
 <pre><code>'strawberry' </code></pre>
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
- waga  2020-04-12 12:24:29
+
+***
 A string with single quotation marks:
 'strawberry'
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step2/lec1_step2.txt#L31
 
 lec1_step2/lec1_step2.txt:31
-<pre><code>----'strawberry'---- </code></pre>
+<pre><code>'strawberry' </code></pre>
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
- waga  2020-04-12 12:26:21
+
+***
 A string with double quotation marks:
 "strawberry"
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step2/lec1_step2.txt#L44
 
 lec1_step2/lec1_step2.txt:44
-<pre><code>----'strawberry'---- </code></pre>
+<pre><code>'strawberry' </code></pre>
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
  waga  2020-04-12 12:29:21
 If you type a single line (or last line) without ‘;’  as the termination code, there is no output.
@@ -201,19 +203,18 @@ This is consistent with MATLAB description rule as I explained in the MATLAB tut
 https://github.com/hirowgit/1A_matlab_basic_course#display-the-result
 
 hirowgit/1A_matlab_basic_course
-Language
-<p>HTML</p>
-Last updated
-<p>an hour ago</p>
  <a href="https://github.com/hirowgit/1A_matlab_basic_course">hirowgit/1A_matlab_basic_course</a>
- waga  2020-04-12 12:31:52
+
+***
 Therefore “print” function is usually used.
 https://github.com/hirowgit/2A_python_basic_course/blob/master/lec1_step2.py#L50-L51
 
 lec1_step2.py:50-51
 <pre><code>print('strawberry'); print( 'grape'); </code></pre>
  <a href="https://github.com/hirowgit/2A_python_basic_course">hirowgit/2A_python_basic_course</a>
- waga  2020-04-12 12:49:24
+
+***
+### Recommendation: 
 A predictive attitude is highly important for learners and developers. Asking “Why?” “What’s the next?”
 You may have a question like  “How do I can treat quotation marks inside string?” This is a natural action to update your knowledge and enhance your ability to make a new thing, strengthen your skills to solve a problem newly happening.
 
@@ -225,12 +226,11 @@ https://hirowgit.github.io/2A_python_basic_course/lec1_step2/lec1_step2.html
 This is a short review:
 
 +In[21]:+
-
-How to use quotation marks inside the string.
-
-Note: double quotation marks displayed at the beginning and end
-
-’strawberry\‘s cake’
+<pre><code>
+_How to use quotation marks inside the string._  
+_Note: double quotation marks displayed at the beginning and end_  
+’strawberry\‘s cake’  
+</code></pre>
 
 +Out[21]:+
 “strawberry’s cake”
