@@ -13115,7 +13115,46 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech </span>
+<span class="c1">#</span>
+<span class="c1"># The MIT License (MIT): Copyright (c) 2020 Hiroaki Wagatsuma and Wagatsuma Lab@Kyutech</span>
+<span class="c1"># </span>
+<span class="c1"># Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</span>
+<span class="c1"># The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</span>
+<span class="c1"># THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */</span>
+<span class="c1">#</span>
+<span class="c1"># # @Time    : 2020-10-14 </span>
+<span class="c1"># # @Author  : Hiroaki Wagatsuma</span>
+<span class="c1"># # @Site    : https://github.com/hirowgit/2A_python_basic_course</span>
+<span class="c1"># # @IDE     : Python 3.7.7 (default, Mar 10 2020, 15:43:27) [Clang 10.0.0 (clang-1000.11.45.5)] on darwin</span>
+<span class="c1"># # @File    : lec1_step6.py </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Practice 2-3 (page 24/28)</span>
+<span class="c1"># https://www.slideshare.net/tadahirotaniguchi0624/2-46861654</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">TargetGraph</span><span class="o">=</span><span class="p">{</span>
@@ -13135,22 +13174,21 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">OpenList</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">]</span>
 <span class="n">ClosedList</span><span class="o">=</span><span class="p">[]</span>
 <span class="k">while</span> <span class="n">OpenList</span><span class="p">:</span>
-    <span class="n">state</span><span class="o">=</span><span class="n">OpenList</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># the last item</span>
-    <span class="k">del</span> <span class="n">OpenList</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># the last item</span>
+    <span class="n">state</span><span class="o">=</span><span class="n">OpenList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  
+    <span class="k">del</span> <span class="n">OpenList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  
     <span class="n">ClosedList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">state</span><span class="o">==</span><span class="s1">&#39;G&#39;</span><span class="p">:</span>
         <span class="k">break</span>
- <span class="c1">#   activeNodes=TargetGraph[state]</span>
     <span class="n">activeNodes</span><span class="o">=</span><span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">TargetGraph</span><span class="p">[</span><span class="n">state</span><span class="p">]</span> <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ClosedList</span><span class="p">]</span>
-    <span class="n">OpenList</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">activeNodes</span><span class="p">)</span>
-<span class="c1">#    OpenList=[item for i in OpenList for item in i]</span>
+ <span class="c1">#   OpenList.insert(-1, activeNodes)  # the first item</span>
+    <span class="n">OpenList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">activeNodes</span><span class="p">)</span>  <span class="c1"># the last item</span>
     <span class="n">OpenList</span><span class="o">=</span><span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">OpenList</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">i</span> <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ClosedList</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;completed&#39;</span><span class="p">)</span> 
 </pre></div>
@@ -13170,10 +13208,90 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>S
-B
 A
+B
 C
 D
+completed
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">TargetGraph</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;E&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;F&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;G&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;J&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;H&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;I&#39;</span><span class="p">:[</span><span class="s1">&#39;D&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;J&#39;</span><span class="p">:[</span><span class="s1">&#39;G&#39;</span><span class="p">]</span>
+<span class="c1">#    &#39;G&#39;:&#39;unknown now</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">OpenList</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="n">ClosedList</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">k</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">OpenList</span><span class="p">:</span>
+    <span class="n">state</span><span class="o">=</span><span class="n">OpenList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  
+    <span class="k">del</span> <span class="n">OpenList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  
+    <span class="n">ClosedList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="o">+</span><span class="n">state</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">state</span><span class="o">==</span><span class="s1">&#39;Goal&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">activeNodes</span><span class="o">=</span><span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">TargetGraph</span><span class="p">[</span><span class="n">state</span><span class="p">]</span> <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ClosedList</span><span class="p">]</span>
+    <span class="n">OpenList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">activeNodes</span><span class="p">)</span>  <span class="c1"># the last item</span>
+    <span class="n">OpenList</span><span class="o">=</span><span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">OpenList</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">i</span> <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ClosedList</span><span class="p">]</span>
+    <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;completed&#39;</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1: A
+2: B
+3: C
+4: D
+5: E
+6: F
+7: G
+8: H
+9: I
+10: J
 completed
 </pre>
 </div>
