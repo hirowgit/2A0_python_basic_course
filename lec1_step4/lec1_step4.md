@@ -1,5 +1,3 @@
-
-
 ```python
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
 #
@@ -145,6 +143,23 @@ print(x3)
     0.7071067811865475
     0.7071067811865475
     [0.         0.70710678 1.         0.70710678]
+
+
+
+```python
+x1=math.sin([0,pi/4,pi/2,3*pi/4])
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-12-c47a2d0560bb> in <module>()
+    ----> 1 x1=math.sin([0,pi/4,pi/2,3*pi/4])
+    
+
+    TypeError: must be real number, not list
 
 
 

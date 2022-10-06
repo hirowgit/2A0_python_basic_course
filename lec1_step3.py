@@ -19,14 +19,14 @@
 # # @File    : lec1_step3.py 
 
 
-# In[2]:
+# In[1]:
 
 
 # running without modules on mathematics
 pi
 
 
-# In[3]:
+# In[2]:
 
 
 # module test: if you have an error when you run this code, you need to check the installation status of those modules
@@ -37,7 +37,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# In[4]:
+# In[3]:
 
 
 import math 
@@ -45,7 +45,7 @@ pi=math.pi
 print(pi)
 
 
-# In[5]:
+# In[4]:
 
 
 x = np.arange(-3.14, 3.14, 0.1)

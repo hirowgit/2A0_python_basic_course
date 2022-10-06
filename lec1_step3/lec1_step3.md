@@ -1,5 +1,3 @@
-
-
 ```python
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
 #
@@ -27,8 +25,9 @@ pi
 
     NameError                                 Traceback (most recent call last)
 
-    <ipython-input-2-f84ab820532c> in <module>()
-    ----> 1 pi
+    <ipython-input-1-a32b06eedaf6> in <module>()
+          1 # running without modules on mathematics
+    ----> 2 pi
     
 
     NameError: name 'pi' is not defined
@@ -64,12 +63,14 @@ plt.plot(x, y)
 
 
 
-    [<matplotlib.lines.Line2D at 0x118ea2310>]
+    [<matplotlib.lines.Line2D at 0x11478f4d0>]
 
 
 
 
+    
 ![png](lec1_step3_files/lec1_step3_4_1.png)
+    
 
 
 

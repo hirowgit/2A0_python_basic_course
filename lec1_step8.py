@@ -26,7 +26,7 @@
 # https://www.slideshare.net/tadahirotaniguchi0624/3-46861684
 
 
-# In[38]:
+# In[1]:
 
 
 TargetGraph={
@@ -147,7 +147,13 @@ hh2=[i[1] for i in H2 ]
 [(hh1[i],hh2[i]) for i in range(len(hh1)) ]
 
 
-# In[90]:
+# In[5]:
+
+
+['S','A','B','C','D','E','F','G']
+
+
+# In[3]:
 
 
 C=[[0, 2, 6, 0, 0, 0, 0, 0],
@@ -173,7 +179,7 @@ print(C)
 pprint.pprint(C)
 
 
-# In[99]:
+# In[53]:
 
 
 N=7
@@ -182,10 +188,191 @@ Node=['S']+Node
 print(Node)
 
 
-# In[110]:
+# In[11]:
 
 
-[s for s in range(len(Node)) if 'E' in Node[s]][0]
+OpenList=['B','D']
+# Node.index('B')
+indexList=[Node.index(L)  for L in OpenList]
+indexList
+
+
+# In[37]:
+
+
+Node.index(state)
+
+
+# In[39]:
+
+
+key=Node.index(state)
+Cost=C[key]
+Cost
+
+
+# In[70]:
+
+
+OpenList=['S','A','E','F']
+state='B'
+key=Node.index(state)
+Cost=C[key]
+print(Cost)
+print(' ')
+indexList=[Node.index(L)  for L in OpenList]
+print(indexList)
+CList=[C[Node.index(state)][i] for i in indexList]
+# a[[0,1]]
+print(C[Node.index(state)])
+print(CList)
+print(sorted(CList))
+
+
+# In[71]:
+
+
+LL=[7,6,5,4,3,2,1]
+LL.sort(key=lambda x: x)
+print(LL)
+
+LL=[7,6,5,4,3,2,1]
+LL.sort()
+print(LL)
+
+
+# In[72]:
+
+
+LL=[7,6,5,4,3,2,1]
+aa=['a','b','c','d','e','f','g']
+aa.sort(key=LL)
+aa
+
+
+# In[73]:
+
+
+keys = ['node','cost']
+d_all=[]
+for i in range(len(Node)):
+    values=[Node[i],Cost[i]]
+    d = {k: v for k, v in zip(keys, values)}
+    d_all.append(d)
+print(d_all)
+d_all.sort(key=lambda x: x['cost'])
+d_all
+
+
+# In[75]:
+
+
+keys = ['node','cost']
+d_all=[]
+for i in range(len(Node)):
+    values=[Node[i],Cost[i]]
+    d = {k: v for k, v in zip(keys, values)}
+    d_all.append(d)
+print(d_all)
+d_all.sort(key=lambda x: x['cost'], reverse=True)
+d_all
+
+
+# In[77]:
+
+
+print(OpenList)
+print(CList)
+print(' ')
+keys = ['node','cost']
+# keys2 = ['node','cost','h']
+d_all=[]
+for i in range(len(OpenList)):
+    values=[OpenList[i],CList[i]]
+    d = {k: v for k, v in zip(keys, values)}
+    d_all.append(d)
+print(d_all)
+d_all.sort(key=lambda x: x['cost'])
+print(d_all)
+print([d['node'] for d in d_all])
+
+
+# In[122]:
+
+
+mergedList[0]
+[mergedList[j][0] for j in range(len(mergedList))]
+print(mergedList)
+print(len(mergedList[0]))
+
+
+# In[125]:
+
+
+OpenList=['S','A','E','F']
+state='B'
+key=Node.index(state)
+Cost=C[key]
+indexList=[Node.index(L)  for L in OpenList]
+# print(Node[[0,1]])
+CList=[C[Node.index(state)][i] for i in indexList]
+mergedList=[OpenList,indexList,CList]
+print(mergedList)
+
+mergedList2=[]
+for i in range(len(mergedList[0])):
+    mergedList2.append([mergedList[j][i] for j in range(len(mergedList))])
+    
+    print([i])
+    print(mergedList2)
+
+
+print(mergedList2)
+print(' ')
+
+mergedList2.sort(key=lambda x: x[2])
+print(mergedList2)
+[mergedList2[i][0] for i in range(len(mergedList2))]
+
+
+# In[102]:
+
+
+import numpy as np
+
+OpenList=['S','A','E','F']
+state='B'
+key=Node.index(state)
+Cost=C[key]
+indexList=[Node.index(L)  for L in OpenList]
+# print(Node[[0,1]])
+CList=[C[Node.index(state)][i] for i in indexList]
+mergedList=[OpenList,indexList,CList]
+print(mergedList)
+
+mergedList_np=np.array(mergedList)
+print(mergedList_np)
+# np.transpose(mergedList_np)
+print(mergedList_np.T)
+print(' ')
+mergedList2=(mergedList_np.T).tolist()
+print(mergedList2[0])
+print(' ')
+mergedList2.sort(key=lambda x: x[2])
+print(mergedList2)
+[mergedList2[i][0] for i in range(len(mergedList2))]
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+# =============================
 
 
 # In[113]:
@@ -217,7 +404,7 @@ j=[s for s in range(len(Node)) if g[1] in Node[s]][0]
 C[i][j]
 
 
-# In[129]:
+# In[7]:
 
 
 def eachCost(Pair,Node,C):
@@ -242,7 +429,8 @@ g=('S', 'A')
 eachCost(g,Node,C)
 
 
-# In[142]:
+
+# In[10]:
 
 
 # New with the cost calculation
@@ -274,6 +462,71 @@ while OpenList:
     print('OpenList(2): ',OpenList)
     print('ClosedList: ',ClosedList)    
 print('completed') 
+
+
+# In[ ]:
+
+
+# 2022/10/05
+# New with the cost calculation
+CostList=[]
+state=[]
+OpenList=['S']
+ClosedList=[]
+while OpenList: 
+    #print(OpenList)
+    state=OpenList[0]  
+    print(state)
+    del OpenList[0]  
+    ClosedList.append(state)
+    if state=='G':
+        break
+    activeNodes=[item for item in TargetGraph[state] if item not in ClosedList]
+    costM=[(s,state) for s in activeNodes]
+    print(costM)
+    print(costM[0])
+    costMat=[eachCost(costM[i],Node,C) for i in range(len(costM))]
+    print(costMat)
+    OpenList.insert(0, activeNodes)  # the first item
+    CostList.insert(0, costMat)  # the first item
+    print('OpenList(1): ',OpenList)
+    #OpenList=[item for i in OpenList for item in i if i not in ClosedList]
+    OpenList=[item for i in OpenList for item in i]
+    key=[k for k in range(len(OpenList)) if OpenList[k] not in ClosedList]
+    print('key: ',key)
+    print('OpenList(2): ',OpenList)
+    print('ClosedList: ',ClosedList)    
+print('completed') 
+
+
+# In[2]:
+
+
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[0]
+    del OpenList[0]
+    ClosedList=ClosedList+[state]
+    ClosedList=list(set(ClosedList))
+    print(['state',state])
+    print(['OpenList(1)',OpenList])
+    print(['ClosedList',ClosedList])
+    if state=='G':
+        break
+    tmpSt=set(TargetGraph[state]) -set(ClosedList)
+    activeNodes=list(tmpSt -set(OpenList))    
+    OpenList=OpenList+activeNodes
+  #  OpenList=list(set(OpenList))
+    print(['OpenList(2)',OpenList])
+    print('')
+print('Completed') 
+
+
+# In[ ]:
+
+
+
 
 
 # In[208]:
@@ -393,7 +646,7 @@ while OpenList:
 print('completed') 
 
 
-# In[243]:
+# In[3]:
 
 
 # New version 
@@ -458,7 +711,7 @@ print(list(map(lambda x: x + stateC, costMat)))
 print(CostList)
 
 
-# In[253]:
+# In[2]:
 
 
 # New version with sort

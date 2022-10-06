@@ -1,5 +1,3 @@
-
-
 ```python
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
 #
@@ -18,7 +16,7 @@
 
 
 ```python
-fruits = ['strawberry', 'grape', 'tomato'];
+fruits = ['strawberry', 'grape', 'tomato']; 
 print(fruits);
 ```
 
@@ -36,3 +34,8 @@ for x in fruits:
     grape
     tomato
 
+
+
+```python
+
+```

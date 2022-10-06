@@ -1,5 +1,3 @@
-
-
 ```python
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
 #
@@ -110,10 +108,15 @@ print(d)
 Node=[]
 keys = ['cost', 'h', 'f']
 values = [1, 2, 3]
-for i in 
-d = {k: v for k, v in zip(keys, values)}
-print(d)
+for i in range(len(keys)):
+    d = {k: v for k, v in zip(keys, values)}
+    print(d)
 ```
+
+    {'cost': 1, 'h': 2, 'f': 3}
+    {'cost': 1, 'h': 2, 'f': 3}
+    {'cost': 1, 'h': 2, 'f': 3}
+
 
 
 ```python
@@ -178,21 +181,22 @@ print(Node)
 
 
 ```python
-H=list(range(1,len(Node)))
+H=list(range(len(Node)))
 print(H)
-H=list(range(1,len(Node)))
+H=list(range(len(Node)))
 print(H)
-F=3*list(range(1,len(Node)))
+F=3*list(range(len(Node)))
 print(F)
 ```
 
-    [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 
 ```python
+Cost =H
 print(Cost)
 H=list(map(lambda x: x * 2, Cost))
 print(H)
@@ -200,9 +204,9 @@ F=list(map(lambda x: x * 3, Cost))
 print(F)
 ```
 
-    [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [2, 4, 6, 8, 10, 12, 14, 16, 18]
-    [3, 6, 9, 12, 15, 18, 21, 24, 27]
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+    [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
 
 
 
@@ -231,16 +235,27 @@ print(d)
 
 ```python
 keys = ['node','cost', 'h', 'f']
-values = [1, 2, 3]
 d_all=[]
-for i in range(0,len(Node)-1):
+for i in range(len(Node)):
     values=[Node[i],Cost[i],H[i],F[i]]
     d = {k: v for k, v in zip(keys, values)}
     d_all.append(d)
 print(d_all)
 ```
 
-    [{'node': 'A', 'cost': 1, 'h': 2, 'f': 3}, {'node': 'B', 'cost': 2, 'h': 4, 'f': 6}, {'node': 'C', 'cost': 3, 'h': 6, 'f': 9}, {'node': 'D', 'cost': 4, 'h': 8, 'f': 12}, {'node': 'E', 'cost': 5, 'h': 10, 'f': 15}, {'node': 'F', 'cost': 6, 'h': 12, 'f': 18}, {'node': 'G', 'cost': 7, 'h': 14, 'f': 21}, {'node': 'H', 'cost': 8, 'h': 16, 'f': 24}, {'node': 'I', 'cost': 9, 'h': 18, 'f': 27}]
+    [{'node': 'A', 'cost': 0, 'h': 0, 'f': 0}, {'node': 'B', 'cost': 1, 'h': 2, 'f': 3}, {'node': 'C', 'cost': 2, 'h': 4, 'f': 6}, {'node': 'D', 'cost': 3, 'h': 6, 'f': 9}, {'node': 'E', 'cost': 4, 'h': 8, 'f': 12}, {'node': 'F', 'cost': 5, 'h': 10, 'f': 15}, {'node': 'G', 'cost': 6, 'h': 12, 'f': 18}, {'node': 'H', 'cost': 7, 'h': 14, 'f': 21}, {'node': 'I', 'cost': 8, 'h': 16, 'f': 24}, {'node': 'J', 'cost': 9, 'h': 18, 'f': 27}]
+
+
+
+```python
+Node
+```
+
+
+
+
+    ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+
 
 
 
@@ -309,5 +324,114 @@ pprint.pprint(sorted(d_all, key=lambda x: x['f']))
 
 
 ```python
-
+list_0 = [
+        [9, 8, 5],
+        [0, 8, 3],
+        [1, 6, 5],
+        [9, 0, 0],
+        [4, 9, 3],
+        [1, 4, 8],
+        [4, 0, 6],
+        [0, 3, 5],
+        [1, 3, 1],
+        [5, 2, 7],
+    ]
+print(list_0[2])
+list_0.sort(key=lambda x: x[:][0])
+print(list_0)
 ```
+
+    [1, 6, 5]
+    [[0, 8, 3], [0, 3, 5], [1, 6, 5], [1, 4, 8], [1, 3, 1], [4, 9, 3], [4, 0, 6], [5, 2, 7], [9, 8, 5], [9, 0, 0]]
+
+
+
+```python
+list_0 = [
+        [9, 8, 5],
+        [0, 8, 3],
+        [1, 6, 5],
+        [9, 0, 0],
+        [4, 9, 3],
+        [1, 4, 8],
+        [4, 0, 6],
+        [0, 3, 5],
+        [1, 3, 1],
+        [5, 2, 7],
+    ]
+print(list_0[2])
+list_0.sort(key=lambda x: x[0])
+print(list_0)
+```
+
+    [1, 6, 5]
+    [[9, 0, 0], [1, 3, 1], [0, 8, 3], [4, 9, 3], [9, 8, 5], [1, 6, 5], [0, 3, 5], [4, 0, 6], [5, 2, 7], [1, 4, 8]]
+
+
+
+```python
+list_0 = [
+        [1, 3, 2],
+        [2, 2, 1],
+        [3, 1, 3]
+    ]
+stag=1
+print(list_0[:][stag])
+list_0.sort(key=lambda x: x[stag])
+print(list_0)
+```
+
+    [2, 2, 1]
+    [[3, 1, 3], [2, 2, 1], [1, 3, 2]]
+
+
+
+```python
+list_0 = [
+        [1, 4, 7],
+        [2, 5, 8],
+        [3, 6, 9]
+    ]
+stag=1
+print(list_0[:][0])
+print(list_0[0][:])
+print(list_0[0])
+print(' ')
+
+list_0.sort(key=lambda x: x[stag])
+print(list_0)
+```
+
+    [1, 4, 7]
+    [1, 4, 7]
+    [1, 4, 7]
+     
+    [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+
+
+
+```python
+[list_0[i][0] for i in range(len(list_0))]
+```
+
+
+
+
+    [1, 2, 3]
+
+
+
+
+```python
+list_0 = [
+        [9, 8, 5],
+        [0, 8, 3]
+    ]
+print(list_0[1])
+list_0.sort(key=lambda x: x[2])
+print(list_0)
+```
+
+    [0, 8, 3]
+    [[0, 8, 3], [9, 8, 5]]
+

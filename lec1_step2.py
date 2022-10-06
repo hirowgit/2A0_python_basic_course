@@ -19,11 +19,10 @@
 # # @File    : lec1_step2.py 
 
 
-# In[17]:
+# In[ ]:
 
 
-# A string with single quotation marks
-'strawberry'
+import owlready2
 
 
 # In[18]:
