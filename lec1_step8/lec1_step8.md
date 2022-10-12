@@ -1,5 +1,3 @@
-
-
 ```python
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
 #
@@ -239,6 +237,18 @@ hh2=[i[1] for i in H2 ]
 
 
 ```python
+['S','A','B','C','D','E','F','G']
+```
+
+
+
+
+    ['S', 'A', 'B', 'C', 'D', 'E', 'F', 'G']
+
+
+
+
+```python
 C=[[0, 2, 6, 0, 0, 0, 0, 0],
       [2, 0, 2, 1, 0, 0, 0, 0] ,
       [6, 2, 0, 0, 0, 5, 4, 0] ,
@@ -286,15 +296,314 @@ print(Node)
 
 
 ```python
-[s for s in range(len(Node)) if 'E' in Node[s]][0]
+OpenList=['B','D']
+# Node.index('B')
+indexList=[Node.index(L)  for L in OpenList]
+indexList
 ```
 
 
 
 
-    5
+    [2, 4]
 
 
+
+
+```python
+Node.index(state)
+```
+
+
+
+
+    1
+
+
+
+
+```python
+key=Node.index(state)
+Cost=C[key]
+Cost
+```
+
+
+
+
+    [2, 0, 2, 1, 0, 0, 0, 0]
+
+
+
+
+```python
+OpenList=['S','A','E','F']
+state='B'
+key=Node.index(state)
+Cost=C[key]
+print(Cost)
+print(' ')
+indexList=[Node.index(L)  for L in OpenList]
+print(indexList)
+CList=[C[Node.index(state)][i] for i in indexList]
+# a[[0,1]]
+print(C[Node.index(state)])
+print(CList)
+print(sorted(CList))
+```
+
+    [6, 2, 0, 0, 0, 5, 4, 0]
+     
+    [0, 1, 5, 6]
+    [6, 2, 0, 0, 0, 5, 4, 0]
+    [6, 2, 5, 4]
+    [2, 4, 5, 6]
+
+
+
+```python
+LL=[7,6,5,4,3,2,1]
+LL.sort(key=lambda x: x)
+print(LL)
+
+LL=[7,6,5,4,3,2,1]
+LL.sort()
+print(LL)
+```
+
+    [1, 2, 3, 4, 5, 6, 7]
+    [1, 2, 3, 4, 5, 6, 7]
+
+
+
+```python
+LL=[7,6,5,4,3,2,1]
+aa=['a','b','c','d','e','f','g']
+aa.sort(key=LL)
+aa
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    Cell In [72], line 3
+          1 LL=[7,6,5,4,3,2,1]
+          2 aa=['a','b','c','d','e','f','g']
+    ----> 3 aa.sort(key=LL)
+          4 aa
+
+
+    TypeError: 'list' object is not callable
+
+
+
+```python
+keys = ['node','cost']
+d_all=[]
+for i in range(len(Node)):
+    values=[Node[i],Cost[i]]
+    d = {k: v for k, v in zip(keys, values)}
+    d_all.append(d)
+print(d_all)
+d_all.sort(key=lambda x: x['cost'])
+d_all
+```
+
+    [{'node': 'S', 'cost': 6}, {'node': 'A', 'cost': 2}, {'node': 'B', 'cost': 0}, {'node': 'C', 'cost': 0}, {'node': 'D', 'cost': 0}, {'node': 'E', 'cost': 5}, {'node': 'F', 'cost': 4}, {'node': 'G', 'cost': 0}]
+
+
+
+
+
+    [{'node': 'B', 'cost': 0},
+     {'node': 'C', 'cost': 0},
+     {'node': 'D', 'cost': 0},
+     {'node': 'G', 'cost': 0},
+     {'node': 'A', 'cost': 2},
+     {'node': 'F', 'cost': 4},
+     {'node': 'E', 'cost': 5},
+     {'node': 'S', 'cost': 6}]
+
+
+
+
+```python
+keys = ['node','cost']
+d_all=[]
+for i in range(len(Node)):
+    values=[Node[i],Cost[i]]
+    d = {k: v for k, v in zip(keys, values)}
+    d_all.append(d)
+print(d_all)
+d_all.sort(key=lambda x: x['cost'], reverse=True)
+d_all
+```
+
+    [{'node': 'S', 'cost': 6}, {'node': 'A', 'cost': 2}, {'node': 'B', 'cost': 0}, {'node': 'C', 'cost': 0}, {'node': 'D', 'cost': 0}, {'node': 'E', 'cost': 5}, {'node': 'F', 'cost': 4}, {'node': 'G', 'cost': 0}]
+
+
+
+
+
+    [{'node': 'S', 'cost': 6},
+     {'node': 'E', 'cost': 5},
+     {'node': 'F', 'cost': 4},
+     {'node': 'A', 'cost': 2},
+     {'node': 'B', 'cost': 0},
+     {'node': 'C', 'cost': 0},
+     {'node': 'D', 'cost': 0},
+     {'node': 'G', 'cost': 0}]
+
+
+
+
+```python
+print(OpenList)
+print(CList)
+print(' ')
+keys = ['node','cost']
+# keys2 = ['node','cost','h']
+d_all=[]
+for i in range(len(OpenList)):
+    values=[OpenList[i],CList[i]]
+    d = {k: v for k, v in zip(keys, values)}
+    d_all.append(d)
+print(d_all)
+d_all.sort(key=lambda x: x['cost'])
+print(d_all)
+print([d['node'] for d in d_all])
+```
+
+    ['S', 'A', 'E', 'F']
+    [6, 2, 5, 4]
+     
+    [{'node': 'S', 'cost': 6}, {'node': 'A', 'cost': 2}, {'node': 'E', 'cost': 5}, {'node': 'F', 'cost': 4}]
+    [{'node': 'A', 'cost': 2}, {'node': 'F', 'cost': 4}, {'node': 'E', 'cost': 5}, {'node': 'S', 'cost': 6}]
+    ['A', 'F', 'E', 'S']
+
+
+
+```python
+mergedList[0]
+[mergedList[j][0] for j in range(len(mergedList))]
+print(mergedList)
+print(len(mergedList[0]))
+```
+
+    [['S', 'A', 'E', 'F'], [0, 1, 5, 6], [6, 2, 5, 4]]
+    4
+
+
+
+```python
+OpenList=['S','A','E','F']
+state='B'
+key=Node.index(state)
+Cost=C[key]
+indexList=[Node.index(L)  for L in OpenList]
+# print(Node[[0,1]])
+CList=[C[Node.index(state)][i] for i in indexList]
+mergedList=[OpenList,indexList,CList]
+print(mergedList)
+
+mergedList2=[]
+for i in range(len(mergedList[0])):
+    mergedList2.append([mergedList[j][i] for j in range(len(mergedList))])
+    
+    print([i])
+    print(mergedList2)
+
+
+print(mergedList2)
+print(' ')
+
+mergedList2.sort(key=lambda x: x[2])
+print(mergedList2)
+[mergedList2[i][0] for i in range(len(mergedList2))]
+
+```
+
+    [['S', 'A', 'E', 'F'], [0, 1, 5, 6], [6, 2, 5, 4]]
+    [0]
+    [['S', 0, 6]]
+    [1]
+    [['S', 0, 6], ['A', 1, 2]]
+    [2]
+    [['S', 0, 6], ['A', 1, 2], ['E', 5, 5]]
+    [3]
+    [['S', 0, 6], ['A', 1, 2], ['E', 5, 5], ['F', 6, 4]]
+    [['S', 0, 6], ['A', 1, 2], ['E', 5, 5], ['F', 6, 4]]
+     
+    [['A', 1, 2], ['F', 6, 4], ['E', 5, 5], ['S', 0, 6]]
+
+
+
+
+
+    ['A', 'F', 'E', 'S']
+
+
+
+
+```python
+import numpy as np
+
+OpenList=['S','A','E','F']
+state='B'
+key=Node.index(state)
+Cost=C[key]
+indexList=[Node.index(L)  for L in OpenList]
+# print(Node[[0,1]])
+CList=[C[Node.index(state)][i] for i in indexList]
+mergedList=[OpenList,indexList,CList]
+print(mergedList)
+
+mergedList_np=np.array(mergedList)
+print(mergedList_np)
+# np.transpose(mergedList_np)
+print(mergedList_np.T)
+print(' ')
+mergedList2=(mergedList_np.T).tolist()
+print(mergedList2[0])
+print(' ')
+mergedList2.sort(key=lambda x: x[2])
+print(mergedList2)
+[mergedList2[i][0] for i in range(len(mergedList2))]
+
+```
+
+    [['S', 'A', 'E', 'F'], [0, 1, 5, 6], [6, 2, 5, 4]]
+    [['S' 'A' 'E' 'F']
+     ['0' '1' '5' '6']
+     ['6' '2' '5' '4']]
+    [['S' '0' '6']
+     ['A' '1' '2']
+     ['E' '5' '5']
+     ['F' '6' '4']]
+     
+    ['S', '0', '6']
+     
+    [['A', '1', '2'], ['F', '6', '4'], ['E', '5', '5'], ['S', '0', '6']]
+
+
+
+
+
+    ['A', 'F', 'E', 'S']
+
+
+
+
+```python
+
+```
+
+
+```python
+# =============================
+```
 
 
 ```python
@@ -466,6 +775,109 @@ print('completed')
     G
     completed
 
+
+
+```python
+# 2022/10/05
+# New with the cost calculation
+CostList=[]
+state=[]
+OpenList=['S']
+ClosedList=[]
+while OpenList: 
+    #print(OpenList)
+    state=OpenList[0]  
+    print(state)
+    del OpenList[0]  
+    ClosedList.append(state)
+    if state=='G':
+        break
+    activeNodes=[item for item in TargetGraph[state] if item not in ClosedList]
+    costM=[(s,state) for s in activeNodes]
+    print(costM)
+    print(costM[0])
+    costMat=[eachCost(costM[i],Node,C) for i in range(len(costM))]
+    print(costMat)
+    OpenList.insert(0, activeNodes)  # the first item
+    CostList.insert(0, costMat)  # the first item
+    print('OpenList(1): ',OpenList)
+    #OpenList=[item for i in OpenList for item in i if i not in ClosedList]
+    OpenList=[item for i in OpenList for item in i]
+    key=[k for k in range(len(OpenList)) if OpenList[k] not in ClosedList]
+    print('key: ',key)
+    print('OpenList(2): ',OpenList)
+    print('ClosedList: ',ClosedList)    
+print('completed') 
+```
+
+
+```python
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[0]
+    del OpenList[0]
+    ClosedList=ClosedList+[state]
+    ClosedList=list(set(ClosedList))
+    print(['state',state])
+    print(['OpenList(1)',OpenList])
+    print(['ClosedList',ClosedList])
+    if state=='G':
+        break
+    tmpSt=set(TargetGraph[state]) -set(ClosedList)
+    activeNodes=list(tmpSt -set(OpenList))    
+    OpenList=OpenList+activeNodes
+  #  OpenList=list(set(OpenList))
+    print(['OpenList(2)',OpenList])
+    print('')
+print('Completed') 
+```
+
+    ['state', 'S']
+    ['OpenList(1)', []]
+    ['ClosedList', ['S']]
+    ['OpenList(2)', ['A', 'B']]
+    
+    ['state', 'A']
+    ['OpenList(1)', ['B']]
+    ['ClosedList', ['A', 'S']]
+    ['OpenList(2)', ['B', 'C']]
+    
+    ['state', 'B']
+    ['OpenList(1)', ['C']]
+    ['ClosedList', ['B', 'A', 'S']]
+    ['OpenList(2)', ['C', 'F', 'E']]
+    
+    ['state', 'C']
+    ['OpenList(1)', ['F', 'E']]
+    ['ClosedList', ['C', 'A', 'S', 'B']]
+    ['OpenList(2)', ['F', 'E', 'D']]
+    
+    ['state', 'F']
+    ['OpenList(1)', ['E', 'D']]
+    ['ClosedList', ['F', 'A', 'S', 'C', 'B']]
+    ['OpenList(2)', ['E', 'D']]
+    
+    ['state', 'E']
+    ['OpenList(1)', ['D']]
+    ['ClosedList', ['F', 'A', 'S', 'C', 'E', 'B']]
+    ['OpenList(2)', ['D', 'G']]
+    
+    ['state', 'D']
+    ['OpenList(1)', ['G']]
+    ['ClosedList', ['F', 'A', 'S', 'D', 'C', 'E', 'B']]
+    ['OpenList(2)', ['G']]
+    
+    ['state', 'G']
+    ['OpenList(1)', []]
+    ['ClosedList', ['F', 'A', 'S', 'G', 'D', 'C', 'E', 'B']]
+    Completed
+
+
+
+```python
+
+```
 
 
 ```python
@@ -787,54 +1199,30 @@ print('completed')
 
     S
     [('A', 'S'), ('B', 'S')]
-    [2, 6]
-    OpenList(1):  ['A', 'B']
-    CostList(1):  [2, 6]
-    OpenList(2):  ['A', 'B']
-    CostList(2):  [2, 6]
-    ClosedList:  ['S']
-    A
-    [('B', 'A'), ('C', 'A')]
-    [2, 1]
-    OpenList(1):  ['B', 'C', 'B']
-    CostList(1):  [4, 3, 6]
-    OpenList(2):  ['B', 'C', 'B']
-    CostList(2):  [4, 3, 6]
-    ClosedList:  ['S', 'A']
-    B
-    [('E', 'B'), ('F', 'B')]
-    [5, 4]
-    OpenList(1):  ['E', 'F', 'C', 'B']
-    CostList(1):  [9, 8, 3, 6]
-    OpenList(2):  ['E', 'F', 'C']
-    CostList(2):  [9, 8, 3]
-    ClosedList:  ['S', 'A', 'B']
-    E
-    [('C', 'E'), ('D', 'E'), ('G', 'E')]
-    [2, 1, 5]
-    OpenList(1):  ['C', 'D', 'G', 'F', 'C']
-    CostList(1):  [11, 10, 14, 8, 3]
-    OpenList(2):  ['C', 'D', 'G', 'F', 'C']
-    CostList(2):  [11, 10, 14, 8, 3]
-    ClosedList:  ['S', 'A', 'B', 'E']
-    C
-    [('D', 'C')]
-    [5]
-    OpenList(1):  ['D', 'D', 'G', 'F', 'C']
-    CostList(1):  [16, 10, 14, 8, 3]
-    OpenList(2):  ['D', 'D', 'G', 'F']
-    CostList(2):  [16, 10, 14, 8]
-    ClosedList:  ['S', 'A', 'B', 'E', 'C']
-    D
-    [('G', 'D')]
-    [1]
-    OpenList(1):  ['G', 'D', 'G', 'F']
-    CostList(1):  [17, 10, 14, 8]
-    OpenList(2):  ['G', 'G', 'F']
-    CostList(2):  [17, 14, 8]
-    ClosedList:  ['S', 'A', 'B', 'E', 'C', 'D']
-    G
-    completed
+
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    /var/folders/mg/w5t8lkhc8xj79f001s7kzpfh0000gp/T/ipykernel_29209/1580446706.py in <module>
+         21     print(costM)
+         22     #print(costM[0])
+    ---> 23     costMat=[eachCost(costM[i],Node,C) for i in range(len(costM))]
+         24     print(costMat)
+         25     OpenList=activeNodes+OpenList  # the first item
+
+
+    /var/folders/mg/w5t8lkhc8xj79f001s7kzpfh0000gp/T/ipykernel_29209/1580446706.py in <listcomp>(.0)
+         21     print(costM)
+         22     #print(costM[0])
+    ---> 23     costMat=[eachCost(costM[i],Node,C) for i in range(len(costM))]
+         24     print(costMat)
+         25     OpenList=activeNodes+OpenList  # the first item
+
+
+    NameError: name 'eachCost' is not defined
 
 
 
@@ -907,43 +1295,30 @@ print('completed')
 ```
 
     S
-    OpenList(1):  ['A', 'B']
-    CostList(1):  [2, 6]
-    OpenList(sorted):  ['A', 'B']
-    CostList(sorted):  [2, 6]
-    ClosedList:  ['S']
-    A
-    OpenList(1):  ['B', 'C', 'B']
-    CostList(1):  [4, 3, 6]
-    OpenList(sorted):  ['C', 'B', 'B']
-    CostList(sorted):  [3, 4, 6]
-    ClosedList:  ['S', 'A']
-    C
-    OpenList(1):  ['E', 'D', 'B', 'B']
-    CostList(1):  [5, 8, 4, 6]
-    OpenList(sorted):  ['B', 'E', 'B', 'D']
-    CostList(sorted):  [4, 5, 6, 8]
-    ClosedList:  ['S', 'A', 'C']
-    B
-    OpenList(1):  ['E', 'F', 'E', 'B', 'D']
-    CostList(1):  [9, 8, 5, 6, 8]
-    OpenList(sorted):  ['E', 'F', 'D', 'E']
-    CostList(sorted):  [5, 8, 8, 9]
-    ClosedList:  ['S', 'A', 'C', 'B']
-    E
-    OpenList(1):  ['D', 'G', 'F', 'D', 'E']
-    CostList(1):  [6, 10, 8, 8, 9]
-    OpenList(sorted):  ['D', 'F', 'D', 'G']
-    CostList(sorted):  [6, 8, 8, 10]
-    ClosedList:  ['S', 'A', 'C', 'B', 'E']
-    D
-    OpenList(1):  ['G', 'F', 'D', 'G']
-    CostList(1):  [7, 8, 8, 10]
-    OpenList(sorted):  ['G', 'F', 'G']
-    CostList(sorted):  [7, 8, 10]
-    ClosedList:  ['S', 'A', 'C', 'B', 'E', 'D']
-    G
-    completed
+
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    /var/folders/mg/w5t8lkhc8xj79f001s7kzpfh0000gp/T/ipykernel_29209/3817949483.py in <module>
+         18     activeNodes=[item for item in TargetGraph[state] if item not in ClosedList]
+         19     costM=[(s,state) for s in activeNodes]
+    ---> 20     costMat=[eachCost(costM[i],Node,C) for i in range(len(costM))]
+         21     OpenList=activeNodes+OpenList  # the first item
+         22     CostList=list(map(lambda x: x + stateC, costMat))+CostList  # the first item
+
+
+    /var/folders/mg/w5t8lkhc8xj79f001s7kzpfh0000gp/T/ipykernel_29209/3817949483.py in <listcomp>(.0)
+         18     activeNodes=[item for item in TargetGraph[state] if item not in ClosedList]
+         19     costM=[(s,state) for s in activeNodes]
+    ---> 20     costMat=[eachCost(costM[i],Node,C) for i in range(len(costM))]
+         21     OpenList=activeNodes+OpenList  # the first item
+         22     CostList=list(map(lambda x: x + stateC, costMat))+CostList  # the first item
+
+
+    NameError: name 'eachCost' is not defined
 
 
 

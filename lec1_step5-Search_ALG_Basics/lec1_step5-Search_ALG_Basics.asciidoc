@@ -1,0 +1,1253 @@
++*In[ ]:*+
+[source, ipython3]
+----
+## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
+#
+# The MIT License (MIT): Copyright (c) 2020 Hiroaki Wagatsuma and Wagatsuma Lab@Kyutech
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+# The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
+#
+# # @Time    : 2020-10-14 
+# # @Author  : Hiroaki Wagatsuma
+# # @Site    : https://github.com/hirowgit/2A_python_basic_course
+# # @IDE     : Python 3.7.7 (default, Mar 10 2020, 15:43:27) [Clang 10.0.0 (clang-1000.11.45.5)] on darwin
+# # @File    : lec1_step5.py 
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+# Practice 2-2 (page 21/28)
+# https://www.slideshare.net/tadahirotaniguchi0624/2-46861654
+----
+
+
++*In[8]:*+
+[source, ipython3]
+----
+# open list and closed list
+----
+
+
++*In[10]:*+
+[source, ipython3]
+----
+# first idea
+OpenList=[1,2,3,4]
+----
+
+
++*In[5]:*+
+[source, ipython3]
+----
+OpenList[1]
+----
+
+
++*Out[5]:*+
+----2----
+
+
++*In[6]:*+
+[source, ipython3]
+----
+OpenList[0]  # note array start from [0] like C, C++
+----
+
+
++*Out[6]:*+
+----1----
+
+
++*In[10]:*+
+[source, ipython3]
+----
+# As you see in Fig 2.9, open list and closed list should be defined at each node. 
+# Therefore those lists require multiple open and closed lists for each node.
+# It implies dictionary is a good option.
+TargetGraph={
+    'S':'A','B',
+    'A':'S','C','D',
+    'B':'S','C',
+    'C':'A','B','D',
+    'D':'A','C',
+#    'G':'unknown now
+}
+----
+
+
++*Out[10]:*+
+----
+
+      Cell In [10], line 5
+        'S':'A','B',
+                  ^
+    SyntaxError: ':' expected after dictionary key
+
+
+----
+
+
++*In[11]:*+
+[source, ipython3]
+----
+TargetGraph={
+    'S':['A','B'],
+    'A':['S','C','D'],
+    'B':['S','C'],
+    'C':['A','B','D'],
+    'D':['A','C']
+#    'G':'unknown now
+}
+----
+
+
++*In[111]:*+
+[source, ipython3]
+----
+TargetGraph['S']
+----
+
+
++*Out[111]:*+
+----['A', 'B']----
+
+
++*In[112]:*+
+[source, ipython3]
+----
+TargetGraph['S'][0]
+----
+
+
++*Out[112]:*+
+----'A'----
+
+
++*In[3]:*+
+[source, ipython3]
+----
+TargetGraph['S'].append('G')
+----
+
+
++*In[23]:*+
+[source, ipython3]
+----
+print(TargetGraph)
+----
+
+
++*Out[23]:*+
+----
+{'S': ['A', 'B', 'G'], 'A': ['S', 'B'], 'B': ['A', 'B'], 'C': ['A', 'B'], 'D': ['A', 'B']}
+----
+
+
++*In[114]:*+
+[source, ipython3]
+----
+# If you want to delete the last item
+del TargetGraph['S'][-1]
+print(TargetGraph)
+----
+
+
++*Out[114]:*+
+----
+{'S': ['A', 'B'], 'A': ['S', 'C', 'D'], 'B': ['S', 'C'], 'C': ['A', 'B', 'D'], 'D': ['A', 'C']}
+----
+
+
++*In[115]:*+
+[source, ipython3]
+----
+tList=[]
+if tList: 
+    print('Not Empty')
+else:
+    print('Empty') 
+----
+
+
++*Out[115]:*+
+----
+Empty
+----
+
+
++*In[4]:*+
+[source, ipython3]
+----
+tList=[1,2,3,4,5]
+while tList:
+    del tList[0]
+    print(tList)
+print('completed') 
+----
+
+
++*Out[4]:*+
+----
+[2, 3, 4, 5]
+[3, 4, 5]
+[4, 5]
+[5]
+[]
+completed
+----
+
+
++*In[117]:*+
+[source, ipython3]
+----
+OpenList=['S']
+OpenList.insert(0,['A','B']) 
+print(OpenList)
+----
+
+
++*Out[117]:*+
+----
+[['A', 'B'], 'S']
+----
+
+
++*In[118]:*+
+[source, ipython3]
+----
+sList=['A','B']
+[d for d in sList]
+----
+
+
++*Out[118]:*+
+----['A', 'B']----
+
+
++*In[119]:*+
+[source, ipython3]
+----
+TargetGraph['A']
+----
+
+
++*Out[119]:*+
+----['S', 'C', 'D']----
+
+
++*In[6]:*+
+[source, ipython3]
+----
+OpenList=['S']
+sList=['A','B']
+OpenList.insert(0, sList[:]) 
+OpenList=[d for d in OpenList]
+print(OpenList)
+OpenList=[item for i in OpenList for item in i]
+print(OpenList)
+----
+
+
++*Out[6]:*+
+----
+[['A', 'B'], 'S']
+['A', 'B', 'S']
+----
+
+
++*In[13]:*+
+[source, ipython3]
+----
+OpenList=['S']
+sList=['A','B']
+OpenList.append(sList)
+OpenList
+----
+
+
++*Out[13]:*+
+----['S', ['A', 'B']]----
+
+
++*In[12]:*+
+[source, ipython3]
+----
+OpenList=['S']
+sList=['A','B']
+OpenList.insert(0, sList)
+OpenList
+----
+
+
++*Out[12]:*+
+----[['A', 'B'], 'S']----
+
+
++*In[14]:*+
+[source, ipython3]
+----
+OpenList=['S']
+sList=['A','B']
+OpenList.extend(sList)
+OpenList
+----
+
+
++*Out[14]:*+
+----['S', 'A', 'B']----
+
+
++*In[78]:*+
+[source, ipython3]
+----
+if 'A' in ['A', 'B', 'S']: 
+    print('Yes')
+----
+
+
++*Out[78]:*+
+----
+Yes
+----
+
+
++*In[79]:*+
+[source, ipython3]
+----
+if 'A' not in ['A', 'B', 'S']: 
+    print('Yes')
+----
+
+
++*In[88]:*+
+[source, ipython3]
+----
+tList=[]
+addList=['A', 'B', 'S']
+ClosedList=['S']
+activeNode=[item for item in addList if item not in ClosedList]
+activeNode
+----
+
+
++*Out[88]:*+
+----['A', 'B']----
+
+
++*In[134]:*+
+[source, ipython3]
+----
+OpenList=['S']
+state='S'
+OpenList.insert(0, TargetGraph[state]) 
+print(OpenList)
+
+OpenList=['S']
+ClosedList=['S']
+state='S'
+print(TargetGraph[state])
+activeNodes=[item for item in TargetGraph[state] if item not in ClosedList]
+OpenList.insert(0, activeNodes) 
+OpenList=[item for i in OpenList for item in i if item not in ClosedList]
+print(OpenList)
+----
+
+
++*Out[134]:*+
+----
+[['A', 'B'], 'S']
+['A', 'B']
+['A', 'B']
+----
+
+
++*In[13]:*+
+[source, ipython3]
+----
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[0]
+    del OpenList[0]
+    ClosedList.append(state)
+    print(state)
+    if state=='G':
+        break
+ #   activeNodes=TargetGraph[state]
+    activeNodes=[item for item in TargetGraph[state] if item not in ClosedList]
+    OpenList.insert(0, activeNodes)
+#    OpenList=[item for i in OpenList for item in i]
+    OpenList=[item for i in OpenList for item in i if item not in ClosedList]
+print('completed') 
+----
+
+
++*Out[13]:*+
+----
+S
+A
+C
+B
+D
+completed
+----
+
+
++*In[59]:*+
+[source, ipython3]
+----
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[0]
+    del OpenList[0]
+    ClosedList.extend(state)
+    print(state)
+    if state=='G':
+        break
+ #   activeNodes=TargetGraph[state]
+    activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+    OpenList.extend(activeNodes)
+#    OpenList=[item for i in OpenList for item in i]
+ #   OpenList=set(OpenList) -set(ClosedList)
+#    OpenList=[item for i in OpenList for item in i if item not in ClosedList]
+#print('completed') 
+----
+
+
++*Out[59]:*+
+----
+S
+B
+A
+C
+D
+C
+D
+completed
+----
+
+
++*In[7]:*+
+[source, ipython3]
+----
+# completed version of Depth-first search
+
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[-1]
+    del OpenList[-1]
+    ClosedList.extend(state)
+    ClosedList=list(set(ClosedList))
+    print(['state',state])
+    print(['OpenList(1)',OpenList])
+    print(['ClosedList',ClosedList])
+    if state=='G':
+        break
+    tmpSt=set(TargetGraph[state]) -set(ClosedList)
+    activeNodes=list(tmpSt -set(OpenList))    
+    OpenList.extend(activeNodes)
+  #  OpenList=list(set(OpenList))
+    print(['OpenList(2)',OpenList])
+    print('')
+print('Completed') 
+----
+
+
++*Out[7]:*+
+----
+['state', 'S']
+['OpenList(1)', []]
+['ClosedList', ['S']]
+['OpenList(2)', ['A', 'B']]
+
+['state', 'B']
+['OpenList(1)', ['A']]
+['ClosedList', ['S', 'B']]
+['OpenList(2)', ['A', 'C']]
+
+['state', 'C']
+['OpenList(1)', ['A']]
+['ClosedList', ['S', 'C', 'B']]
+['OpenList(2)', ['A', 'D']]
+
+['state', 'D']
+['OpenList(1)', ['A']]
+['ClosedList', ['S', 'C', 'D', 'B']]
+['OpenList(2)', ['A']]
+
+['state', 'A']
+['OpenList(1)', []]
+['ClosedList', ['B', 'S', 'D', 'C', 'A']]
+['OpenList(2)', []]
+
+Completed
+----
+
+
++*In[13]:*+
+[source, ipython3]
+----
+# completed version of Depth-first search
+
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[0]
+    del OpenList[0]
+    ClosedList=[state]+ClosedList
+    ClosedList=list(set(ClosedList))
+    print(['state',state])
+    print(['OpenList(1)',OpenList])
+    print(['ClosedList',ClosedList])
+    if state=='G':
+        break
+    tmpSt=set(TargetGraph[state]) -set(ClosedList)
+    activeNodes=list(tmpSt -set(OpenList))    
+    OpenList.extend(activeNodes)
+  #  OpenList=list(set(OpenList))
+    print(['OpenList(2)',OpenList])
+    print('')
+print('Completed') 
+----
+
+
++*Out[13]:*+
+----
+['state', 'S']
+['OpenList(1)', []]
+['ClosedList', ['S']]
+['OpenList(2)', ['A', 'B']]
+
+['state', 'A']
+['OpenList(1)', ['B']]
+['ClosedList', ['A', 'S']]
+['OpenList(2)', ['B', 'D', 'C']]
+
+['state', 'B']
+['OpenList(1)', ['D', 'C']]
+['ClosedList', ['A', 'B', 'S']]
+['OpenList(2)', ['D', 'C']]
+
+['state', 'D']
+['OpenList(1)', ['C']]
+['ClosedList', ['D', 'A', 'B', 'S']]
+['OpenList(2)', ['C']]
+
+['state', 'C']
+['OpenList(1)', []]
+['ClosedList', ['S', 'A', 'D', 'B', 'C']]
+['OpenList(2)', []]
+
+Completed
+----
+
+
++*In[14]:*+
+[source, ipython3]
+----
+# completed version of Breadth-first search
+
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[0]
+    del OpenList[0]
+    ClosedList=ClosedList+[state]
+    ClosedList=list(set(ClosedList))
+    print(['state',state])
+    print(['OpenList(1)',OpenList])
+    print(['ClosedList',ClosedList])
+    if state=='G':
+        break
+    tmpSt=set(TargetGraph[state]) -set(ClosedList)
+    activeNodes=list(tmpSt -set(OpenList))    
+    OpenList.extend(activeNodes)
+  #  OpenList=list(set(OpenList))
+    print(['OpenList(2)',OpenList])
+    print('')
+print('Completed') 
+----
+
+
++*Out[14]:*+
+----
+['state', 'S']
+['OpenList(1)', []]
+['ClosedList', ['S']]
+['OpenList(2)', ['A', 'B']]
+
+['state', 'A']
+['OpenList(1)', ['B']]
+['ClosedList', ['A', 'S']]
+['OpenList(2)', ['B', 'D', 'C']]
+
+['state', 'B']
+['OpenList(1)', ['D', 'C']]
+['ClosedList', ['A', 'B', 'S']]
+['OpenList(2)', ['D', 'C']]
+
+['state', 'D']
+['OpenList(1)', ['C']]
+['ClosedList', ['D', 'A', 'B', 'S']]
+['OpenList(2)', ['C']]
+
+['state', 'C']
+['OpenList(1)', []]
+['ClosedList', ['S', 'A', 'D', 'B', 'C']]
+['OpenList(2)', []]
+
+Completed
+----
+
+
++*In[16]:*+
+[source, ipython3]
+----
+activeNodes
+----
+
+
++*Out[16]:*+
+----[]----
+
+
++*In[15]:*+
+[source, ipython3]
+----
+# completed version of Breadth-first search
+
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[0]
+    del OpenList[0]
+    ClosedList.extend(state)
+    ClosedList=list(set(ClosedList))
+    print(['state',state])
+    print(['OpenList(1)',OpenList])
+    print(['ClosedList',ClosedList])
+    if state=='G':
+        break
+    tmpSt=set(TargetGraph[state]) -set(ClosedList)
+    activeNodes=list(tmpSt -set(OpenList))    
+    OpenList.extend(activeNodes)
+  #  OpenList=list(set(OpenList))
+    print(['OpenList(2)',OpenList])
+    print('')
+print('Completed') 
+----
+
+
++*Out[15]:*+
+----
+['state', 'S']
+['OpenList(1)', []]
+['ClosedList', ['S']]
+['OpenList(2)', ['A', 'B']]
+
+['state', 'A']
+['OpenList(1)', ['B']]
+['ClosedList', ['A', 'S']]
+['OpenList(2)', ['B', 'D', 'C']]
+
+['state', 'B']
+['OpenList(1)', ['D', 'C']]
+['ClosedList', ['A', 'B', 'S']]
+['OpenList(2)', ['D', 'C']]
+
+['state', 'D']
+['OpenList(1)', ['C']]
+['ClosedList', ['D', 'A', 'B', 'S']]
+['OpenList(2)', ['C']]
+
+['state', 'C']
+['OpenList(1)', []]
+['ClosedList', ['S', 'A', 'D', 'B', 'C']]
+['OpenList(2)', []]
+
+Completed
+----
+
+
++*In[138]:*+
+[source, ipython3]
+----
+tmpL= ['D', 'C',  'A', 'S', 'C', 'A', 'B', 'A', 'B']
+tmpL= [ 'A', 'S', 'C', 'A', 'B', 'B', 'A']
+list(set(tmpL))
+----
+
+
++*Out[138]:*+
+----['S', 'B', 'A', 'C']----
+
+
++*In[120]:*+
+[source, ipython3]
+----
+ClosedList=['S', 'B', 'A', 'C', 'D', 'C', 'D']
+set(ClosedList)
+----
+
+
++*Out[120]:*+
+----{'A', 'B', 'C', 'D', 'S'}----
+
+
++*In[116]:*+
+[source, ipython3]
+----
+OpenList=['S']
+ClosedList=[]
+while OpenList:
+    state=OpenList[-1]
+    del OpenList[-1]
+    ClosedList.extend(state)
+    print(state)
+    if state=='G':
+        break
+ #   activeNodes=TargetGraph[state]
+    activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+    #print(state)
+    OpenList.extend(activeNodes)
+#    OpenList=[item for i in OpenList for item in i]
+ #   OpenList=set(OpenList) -set(ClosedList)
+#    OpenList=[item for i in OpenList for item in i if item not in ClosedList]
+print('completed') 
+----
+
+
++*Out[116]:*+
+----
+S
+A
+C
+B
+D
+D
+B
+completed
+----
+
+
++*In[114]:*+
+[source, ipython3]
+----
+OpenList=['S']
+ClosedList=[]
+state=OpenList[0]
+del OpenList[0]
+ClosedList.extend(state)
+print(state)
+activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+print(activeNodes)
+print(OpenList)
+OpenList=activeNodes.extend(OpenList)
+print(OpenList)
+----
+
+
++*Out[114]:*+
+----
+S
+['B', 'A']
+[]
+None
+----
+
+
++*In[103]:*+
+[source, ipython3]
+----
+OpenList=['S']
+ClosedList=[]
+state=OpenList[0]
+del OpenList[0]
+ClosedList.extend(state)
+print(state)
+activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+
+print('activeNodes')
+print(activeNodes)
+print('OpenList')
+print(OpenList)
+print('ClosedList')
+print(ClosedList)
+OpenList.extend(activeNodes)
+print('OpenList')
+print(OpenList)
+----
+
+
++*Out[103]:*+
+----
+S
+activeNodes
+['B', 'A']
+OpenList
+[]
+ClosedList
+['S']
+OpenList
+['B', 'A']
+----
+
+
++*In[109]:*+
+[source, ipython3]
+----
+state=OpenList[0]
+del OpenList[0]
+ClosedList.extend(state)
+print(state)
+activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+
+print('activeNodes')
+print(activeNodes)
+print('OpenList')
+print(OpenList)
+print('ClosedList')
+print(ClosedList)
+OpenList.extend(activeNodes)
+print('OpenList')
+print(OpenList)
+----
+
+
++*Out[109]:*+
+----
+D
+activeNodes
+[]
+OpenList
+[]
+ClosedList
+['S', 'B', 'A', 'C', 'D', 'C', 'D']
+OpenList
+[]
+----
+
+
++*In[88]:*+
+[source, ipython3]
+----
+activeNodes=['B', 'A']
+print(activeNodes)
+OpenList=[]
+print(OpenList)
+activeNodes.extend(OpenList)
+print(activeNodes)
+print(OpenList)
+print(activeNodes.extend(OpenList))
+#OpenList=activeNodes.extend(OpenList)
+activeNodes.extend(OpenList)
+print(OpenList)
+print(activeNodes)
+activeNodes.extend(OpenList)
+----
+
+
++*Out[88]:*+
+----
+['B', 'A']
+[]
+['B', 'A']
+[]
+None
+[]
+['B', 'A']
+----
+
+
++*In[66]:*+
+[source, ipython3]
+----
+state=OpenList[0]
+del OpenList[0]
+ClosedList.extend(state)
+print(state)
+activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+print(activeNodes)
+#OpenList.extend(activeNodes)
+OpenList=activeNodes.extend(OpenList)
+OpenList
+
+----
+
+
++*Out[66]:*+
+----
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    /var/folders/mg/w5t8lkhc8xj79f001s7kzpfh0000gp/T/ipykernel_45436/4057407122.py in <module>
+    ----> 1 state=OpenList[0]
+          2 del OpenList[0]
+          3 ClosedList.extend(state)
+          4 print(state)
+          5 activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+
+
+    TypeError: 'NoneType' object is not subscriptable
+
+----
+
+
++*In[57]:*+
+[source, ipython3]
+----
+OpenList
+activeNodes
+----
+
+
++*Out[57]:*+
+----{'C'}----
+
+
++*In[51]:*+
+[source, ipython3]
+----
+OpenList=['S']
+del OpenList[0]
+activeNodes
+OpenList=activeNodes.extend(OpenList)
+----
+
+
++*In[44]:*+
+[source, ipython3]
+----
+activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+activeNodes
+OpenList=activeNodes.extend(OpenList)
+OpenList
+
+----
+
+
++*Out[44]:*+
+----
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    /var/folders/mg/w5t8lkhc8xj79f001s7kzpfh0000gp/T/ipykernel_45436/4272406267.py in <module>
+          1 activeNodes=list(set(TargetGraph[state]) -set(ClosedList))
+          2 activeNodes
+    ----> 3 OpenList=activeNodes.extend(OpenList)
+          4 OpenList
+
+
+    TypeError: 'NoneType' object is not iterable
+
+----
+
+
++*In[25]:*+
+[source, ipython3]
+----
+OpenList=['S']
+ClosedList=[]
+state=OpenList[0]
+del OpenList[0]
+ClosedList.extend(state)
+ClosedList
+TargetGraph[state]
+OpenList
+----
+
+
++*Out[25]:*+
+----[]----
+
+
++*In[29]:*+
+[source, ipython3]
+----
+set(['S','A','B'])-set(['C','A','B'])
+----
+
+
++*Out[29]:*+
+----{'S'}----
+
+
++*In[28]:*+
+[source, ipython3]
+----
+set([1,2,3,4,5])-set([2,4])
+----
+
+
++*Out[28]:*+
+----{1, 3, 5}----
+
+
++*In[136]:*+
+[source, ipython3]
+----
+TargetGraph={
+    'A':['B','C'],
+    'B':['A','D','E'],
+    'C':['A','F','G','H'],
+    'D':['B','I'],
+    'E':['B'],
+    'F':['C'],
+    'G':['C','J'],
+    'H':['C'],
+    'I':['D'],
+    'J':['G']
+#    'G':'unknown now
+}
+----
+
+
++*In[143]:*+
+[source, ipython3]
+----
+OpenList=['A']
+ClosedList=[]
+k=1
+while OpenList:
+    state=OpenList[0]
+    del OpenList[0]
+    ClosedList.append(state)
+    print(str(k)+": "+state)
+    if state=='Goal':
+        break
+ #   activeNodes=TargetGraph[state]
+    activeNodes=[item for item in TargetGraph[state] if item not in ClosedList]
+    OpenList.insert(0, activeNodes)
+#    OpenList=[item for i in OpenList for item in i]
+    OpenList=[item for i in OpenList for item in i if item not in ClosedList]
+    k=k+1
+print('completed') 
+----
+
+
++*Out[143]:*+
+----
+1: A
+2: B
+3: D
+4: I
+5: E
+6: C
+7: F
+8: G
+9: J
+10: H
+completed
+----
+
+
++*In[140]:*+
+[source, ipython3]
+----
+activeNodes=[item for item in TargetGraph[state] if item not in ClosedList]
+activeNodes
+----
+
+
++*Out[140]:*+
+----[]----
+
+
++*In[144]:*+
+[source, ipython3]
+----
+TargetG=['A','B','C','D','E','F']
+ClosedList=['C','F']
+OpenList=['A']
+activeNodes=[item for item in TargetG if item not in ClosedList]
+activeNodes
+print('activeNodes',activeNodes) 
+OpenList.insert(0, activeNodes)
+print('OpenList',OpenList) 
+----
+
+
++*Out[144]:*+
+----
+activeNodes ['A', 'B', 'D', 'E']
+OpenList [['A', 'B', 'D', 'E'], 'A']
+----
+
+
++*In[145]:*+
+[source, ipython3]
+----
+TargetG=['A','B','C','D','E','F']
+ClosedList=['C','F']
+OpenList=['A']
+activeNodes=[item for item in TargetG if item not in ClosedList]
+activeNodes
+print('activeNodes',activeNodes) 
+OpenList.append(activeNodes)
+print('OpenList',OpenList) 
+----
+
+
++*Out[145]:*+
+----
+activeNodes ['A', 'B', 'D', 'E']
+OpenList ['A', ['A', 'B', 'D', 'E']]
+----
+
+
++*In[146]:*+
+[source, ipython3]
+----
+TargetG=['A','B','C','D','E','F']
+ClosedList=['C','F']
+OpenList=['A']
+activeNodes=[item for item in TargetG if item not in ClosedList]
+activeNodes
+print('activeNodes',activeNodes) 
+OpenList.extend(activeNodes)
+print('OpenList',OpenList) 
+----
+
+
++*Out[146]:*+
+----
+activeNodes ['A', 'B', 'D', 'E']
+OpenList ['A', 'A', 'B', 'D', 'E']
+----
+
+
++*In[148]:*+
+[source, ipython3]
+----
+TargetG=['A','B','C','D','E','F']
+ClosedList=['C','F']
+OpenList=['A']
+activeNodes=[item for item in TargetG if item not in ClosedList]
+print('activeNodes',activeNodes) 
+
+----
+
+
++*Out[148]:*+
+----
+activeNodes ['A', 'B', 'D', 'E']
+----
+
+
++*In[149]:*+
+[source, ipython3]
+----
+TargetG=['A','B','C','D','E','F']
+ClosedList=['C','F']
+OpenList=['A']
+activeNodes=list(set(TargetG)-set(ClosedList))
+print('activeNodes',activeNodes) 
+----
+
+
++*Out[149]:*+
+----
+activeNodes ['D', 'B', 'A', 'E']
+----
+
+
++*In[154]:*+
+[source, ipython3]
+----
+import numpy as np
+from pytictoc import TicToc 
+t = TicToc() #create instance of class 
+t.tic() #Start timer 
+t.toc() #Time elapsed since t.tic() Elapsed time is 2.612231 seconds.
+
+----
+
+
++*Out[154]:*+
+----
+Elapsed time is 0.000015 seconds.
+----
+
+
++*In[167]:*+
+[source, ipython3]
+----
+t = TicToc() #create instance of class 
+loopN=100
+NofD_target=10000
+NofD_clist=5000
+t.tic() #Start timer 
+for i in range(0,loopN):
+    rD_target=np.random.randint(0,NofD_target,size=NofD_target)
+    rD_clist=np.random.randint(0,NofD_target,size=NofD_clist)
+    rDL_target=rD_target.tolist()
+    rDL_clist=rD_clist.tolist()
+    activeNodes=[item for item in rDL_target if item not in rDL_clist]
+
+    # print(rDL_target)
+    # print(rDL_clist)
+    
+t.toc()
+----
+
+
++*Out[167]:*+
+----
+Elapsed time is 45.894154 seconds.
+----
+
+
++*In[168]:*+
+[source, ipython3]
+----
+t = TicToc() #create instance of class 
+loopN=100
+NofD_target=10000
+NofD_clist=5000
+t.tic() #Start timer 
+for i in range(0,loopN):
+    rD_target=np.random.randint(0,NofD_target,size=NofD_target)
+    rD_clist=np.random.randint(0,NofD_target,size=NofD_clist)
+    rDL_target=rD_target.tolist()
+    rDL_clist=rD_clist.tolist()
+    activeNodes=list(set(rD_target)-set(rD_clist))
+    # print(rDL_target)
+    # print(rDL_clist)
+    
+t.toc()
+----
+
+
++*Out[168]:*+
+----
+Elapsed time is 0.214059 seconds.
+----
+
+
++*In[171]:*+
+[source, ipython3]
+----
+sD = np.arange(10).reshape(2, 5)
+sD = sD/2
+print(sD)
+np.savetxt('csv_data_d.csv', sD, delimiter=',', fmt='%d') 
+np.savetxt('csv_data_f.csv', sD, delimiter=',', fmt='%.5f')
+
+----
+
+
++*Out[171]:*+
+----
+[[0.  0.5 1.  1.5 2. ]
+ [2.5 3.  3.5 4.  4.5]]
+----

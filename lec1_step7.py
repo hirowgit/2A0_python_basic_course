@@ -32,7 +32,7 @@
 # https://note.nkmk.me/python-dict-list-sort/
 
 
-# In[13]:
+# In[7]:
 
 
 import pprint
@@ -60,7 +60,7 @@ pprint.pprint(sorted(l, key=lambda x: x['Population']))
 pprint.pprint(sorted(l, key=lambda x: x['Population'], reverse=True))
 
 
-# In[25]:
+# In[8]:
 
 
 # https://note.nkmk.me/python-dict-create/
@@ -70,15 +70,15 @@ d = {k: v for k, v in zip(keys, values)}
 print(d)
 
 
-# In[ ]:
+# In[10]:
 
 
 Node=[]
 keys = ['cost', 'h', 'f']
 values = [1, 2, 3]
-for i in 
-d = {k: v for k, v in zip(keys, values)}
-print(d)
+for i in range(len(keys)):
+    d = {k: v for k, v in zip(keys, values)}
+    print(d)
 
 
 # In[28]:
@@ -106,27 +106,28 @@ for i in range(65,65+10):
     print(s)
 
 
-# In[2]:
+# In[12]:
 
 
 Node=[chr(i) for i in range(65,65+10)]
 print(Node)
 
 
-# In[5]:
+# In[83]:
 
 
-H=list(range(1,len(Node)))
+H=list(range(len(Node)))
 print(H)
-H=list(range(1,len(Node)))
+H=list(range(len(Node)))
 print(H)
-F=3*list(range(1,len(Node)))
+F=3*list(range(len(Node)))
 print(F)
 
 
-# In[6]:
+# In[85]:
 
 
+Cost =H
 print(Cost)
 H=list(map(lambda x: x * 2, Cost))
 print(H)
@@ -143,7 +144,7 @@ print(data1)
 print(data2)
 
 
-# In[64]:
+# In[17]:
 
 
 keys = ['node','cost', 'h', 'f']
@@ -152,20 +153,25 @@ d = {k: v for k, v in zip(keys, values)}
 print(d)
 
 
-# In[66]:
+# In[86]:
 
 
 keys = ['node','cost', 'h', 'f']
-values = [1, 2, 3]
 d_all=[]
-for i in range(0,len(Node)-1):
+for i in range(len(Node)):
     values=[Node[i],Cost[i],H[i],F[i]]
     d = {k: v for k, v in zip(keys, values)}
     d_all.append(d)
 print(d_all)
 
 
-# In[70]:
+# In[75]:
+
+
+Node
+
+
+# In[19]:
 
 
 pprint.pprint(sorted(d_all, key=lambda x: x['node']))
@@ -189,8 +195,92 @@ pprint.pprint(sorted(d_all, key=lambda x: x['h']))
 pprint.pprint(sorted(d_all, key=lambda x: x['f']))
 
 
-# In[ ]:
+# In[24]:
 
 
+list_0 = [
+        [9, 8, 5],
+        [0, 8, 3],
+        [1, 6, 5],
+        [9, 0, 0],
+        [4, 9, 3],
+        [1, 4, 8],
+        [4, 0, 6],
+        [0, 3, 5],
+        [1, 3, 1],
+        [5, 2, 7],
+    ]
+print(list_0[2])
+list_0.sort(key=lambda x: x[:][0])
+print(list_0)
 
+
+# In[31]:
+
+
+list_0 = [
+        [9, 8, 5],
+        [0, 8, 3],
+        [1, 6, 5],
+        [9, 0, 0],
+        [4, 9, 3],
+        [1, 4, 8],
+        [4, 0, 6],
+        [0, 3, 5],
+        [1, 3, 1],
+        [5, 2, 7],
+    ]
+print(list_0[2])
+list_0.sort(key=lambda x: x[0])
+print(list_0)
+
+
+# In[47]:
+
+
+list_0 = [
+        [1, 3, 2],
+        [2, 2, 1],
+        [3, 1, 3]
+    ]
+stag=1
+print(list_0[:][stag])
+list_0.sort(key=lambda x: x[stag])
+print(list_0)
+
+
+# In[67]:
+
+
+list_0 = [
+        [1, 4, 7],
+        [2, 5, 8],
+        [3, 6, 9]
+    ]
+stag=1
+print(list_0[:][0])
+print(list_0[0][:])
+print(list_0[0])
+print(' ')
+
+list_0.sort(key=lambda x: x[stag])
+print(list_0)
+
+
+# In[62]:
+
+
+[list_0[i][0] for i in range(len(list_0))]
+
+
+# In[71]:
+
+
+list_0 = [
+        [9, 8, 5],
+        [0, 8, 3]
+    ]
+print(list_0[1])
+list_0.sort(key=lambda x: x[2])
+print(list_0)
 

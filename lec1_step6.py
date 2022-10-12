@@ -26,7 +26,7 @@
 # https://www.slideshare.net/tadahirotaniguchi0624/2-46861654
 
 
-# In[50]:
+# In[2]:
 
 
 TargetGraph={
@@ -39,7 +39,7 @@ TargetGraph={
 }
 
 
-# In[51]:
+# In[3]:
 
 
 OpenList=['S']
@@ -47,7 +47,7 @@ ClosedList=[]
 while OpenList:
     state=OpenList[0]  
     del OpenList[0]  
-    ClosedList.append(state)
+    ClosedList.extend(state)
     print(state)
     if state=='G':
         break

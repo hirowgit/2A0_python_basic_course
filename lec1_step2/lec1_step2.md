@@ -1,5 +1,3 @@
-
-
 ```python
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
 #
@@ -18,16 +16,8 @@
 
 
 ```python
-# A string with single quotation marks
-'strawberry'
+import owlready2
 ```
-
-
-
-
-    'strawberry'
-
-
 
 
 ```python

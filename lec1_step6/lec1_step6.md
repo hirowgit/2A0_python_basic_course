@@ -1,5 +1,3 @@
-
-
 ```python
 ## Python basics for novice data scientists, supported by Wagatsuma Lab@Kyutech 
 #
@@ -41,7 +39,7 @@ ClosedList=[]
 while OpenList:
     state=OpenList[0]  
     del OpenList[0]  
-    ClosedList.append(state)
+    ClosedList.extend(state)
     print(state)
     if state=='G':
         break

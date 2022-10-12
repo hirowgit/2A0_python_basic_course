@@ -19,17 +19,23 @@
 # # @File    : lec1_step1.py 
 
 
-# In[10]:
+# In[2]:
 
 
-fruits = ['strawberry', 'grape', 'tomato'];
+fruits = ['strawberry', 'grape', 'tomato']; 
 print(fruits);
 
 
-# In[3]:
+# In[2]:
 
 
 fruits = ['strawberry', 'grape', 'tomato'];
 for x in fruits:
   print(x)
+
+
+# In[ ]:
+
+
+
 

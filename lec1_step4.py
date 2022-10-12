@@ -19,7 +19,7 @@
 # # @File    : lec1_step4.py 
 
 
-# In[2]:
+# In[3]:
 
 
 # Different types of loading methods 
@@ -122,6 +122,12 @@ x3=np.sin([0,pi/4,pi/2,3*pi/4])
 print(x1)
 print(x2)
 print(x3)
+
+
+# In[12]:
+
+
+x1=math.sin([0,pi/4,pi/2,3*pi/4])
 
 
 # In[ ]:

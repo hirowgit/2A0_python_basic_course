@@ -1,5 +1,3 @@
-
-
 +*In[5]:*+
 [source, ipython3]
 ----
@@ -19,16 +17,11 @@
 ----
 
 
-+*In[17]:*+
++*In[ ]:*+
 [source, ipython3]
 ----
-# A string with single quotation marks
-'strawberry'
+import owlready2
 ----
-
-
-+*Out[17]:*+
-----'strawberry'----
 
 
 +*In[18]:*+
